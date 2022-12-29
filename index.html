@@ -95,7 +95,7 @@
 		<nav class="header-menu">
 			<ul>
 			
-				<li><a href="/" target="_blank">主页</a></li>
+				<li><a href="/self/" target="_blank">简历</a></li>
 			
 				<li><a href="/lzq-tools/" target="_blank">展旗的工具箱</a></li>
 			
@@ -244,7 +244,7 @@
 				<ul style="width: 70%">
 				
 				
-					<li style="width: 25%"><a href="/">主页</a></li>
+					<li style="width: 25%"><a href="/self/">简历</a></li>
 		        
 					<li style="width: 25%"><a href="/lzq-tools/">展旗的工具箱</a></li>
 		        
@@ -277,7 +277,7 @@
   
     <h1 itemprop="name">
 	
-	  <a class="article-title" href="/2022/12/28/%E7%AC%AC%E4%B8%80%E7%AF%87%E5%8D%9A%E5%AE%A2/" target="_blank">第一篇博客</a>
+	  <a class="article-title" href="/2022/12/28/%E7%AC%AC%E4%B8%80%E7%AF%87%E5%8D%9A%E5%AE%A2/" target="_blank">第一篇博客，pip换源，清华源</a>
   
     </h1>
   
@@ -299,6 +299,11 @@
   <div class="article-entry" itemprop="articleBody">
     
     <h2 id="使用pip下载第三方库"><a href="#使用pip下载第三方库" class="headerlink" title="使用pip下载第三方库"></a>使用pip下载第三方库</h2><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">pip install package name</span><br></pre></td></tr></table></figure>
+
+<h2 id="使用命令更改pip下载源"><a href="#使用命令更改pip下载源" class="headerlink" title="使用命令更改pip下载源"></a>使用命令更改pip下载源</h2><ul>
+<li>清华源<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">pip config set global.index-url https://pypi.tuna.tsinghua.edu.cn/simple</span><br></pre></td></tr></table></figure></li>
+</ul>
+<h2 id="pip更新第三方库命令"><a href="#pip更新第三方库命令" class="headerlink" title="pip更新第三方库命令"></a>pip更新第三方库命令</h2><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">pip install --upgrade package name</span><br></pre></td></tr></table></figure>
     
 
     
@@ -313,6 +318,10 @@
 		<i class="icon-price-tags icon"></i>
 		<ul class="article-tag-list">
 			 
+        		<li class="article-tag-list-item">
+        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color4">清华源</a>
+        		</li>
+      		 
         		<li class="article-tag-list-item">
         			<a href="javascript:void(0)" class="js-tag article-tag-list-link color4">pip</a>
         		</li>
@@ -489,6 +498,10 @@
             <input type="checkbox" q-on="click:toggleTag(e)" q-attr="checked:showTags">
           </label>
           <ul class="article-tag-list" q-show="showTags">
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color4">清华源</a>
+              </li>
              
               <li class="article-tag-list-item">
                 <a href="javascript:void(0)" class="js-tag color4">pip</a>
