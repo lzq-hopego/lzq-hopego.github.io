@@ -1,0 +1,21 @@
+
+.ft ul li {
+    float: left;
+    width: 20%;
+	height: 40px;
+    text-align: center;
+    list-style-type: none;
+    margin: 0px;
+    padding: 0px;
+}
+.ft ul li span {
+    
+    color: #fff;
+    font-size: 1em;
+    font-family: "微软雅黑";
+    line-height: 40px;
+}
+.ft a {
+    color: #000;
+    text-decoration: none;
+}

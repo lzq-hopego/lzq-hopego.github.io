@@ -1,0 +1,176 @@
+
+<html lang="en">
+    <head>
+      <meta charset="UTF-8">
+      <link rel="icon" type="image/ico" href="./img/favicon.ico"/>
+      <title>视频解析</title>
+      <style>
+        html{
+          /* 禁止手机浏览器手势后退 */
+            touch-action:none;
+            touch-action:pan-y;
+    
+        }
+        body{
+          text-align: center;
+        }
+        .container {
+          width: 310px;
+          margin: 100px auto;
+        }
+        input {
+          display: block;
+          width: 290px;
+          line-height: 40px;
+          margin: 10px 0;
+          padding: 0 10px;
+          outline: none;
+          border:1px solid #c8cccf;
+          border-radius: 4px;
+          color:#6a6f77;
+        }
+        #msg {
+          width: 100%;
+          line-height: 40px;
+          font-size: 14px;
+          text-align: center;
+        }
+        a:link,a:visited,a:hover,a:active {
+          margin-left: 100px;
+          color: #0366D6;
+        }
+    
+    </style>
+    </head>
+    <body id="body">
+    <div>
+        
+        
+        <div style="text-align:center;margin: 1px auto;">
+        <form action="" method="get"> 
+        <iframe id="iframe" style="background:#000;" frameborder="no" border="0" marginwidth="0" marginheight="0" scrolling="no" allowtransparency="yes" allowfullscreen="true" src=""></iframe>
+        <input type="text" name='url'  id="url" display='none' class="form-control url-text" aria-label="Text input with segmented button dropdown" placeholder="请粘贴视频网址>ㅂ<ﾉ ☆"  title="请复制你想要看的视频网址，粘贴到此处点击播放即可！" value="">
+        
+        <select name="api" id='jk'>
+            <option value=0>超清蓝光接口</option>
+            <option value=1>自适应接口</option>
+            <option value=2>蓝光备用口</option>
+            <option value=3>接口四</option>
+            <option value=4>接口五</option>
+            <option value=5>万能接口</option>
+            <option value=6>贼稳接口(有广告)</option>
+            <option value=7>B站解析</option>
+            <option value=8>诺迅解析</option>
+            <option value=9>备用1</option>
+            <option value=10>备用2</option>
+        </select>
+        <button type="submit" class="btn-play" title="点击开始解析并开始播放">解析播放</button>
+        
+        </form>
+    
+    
+        </div>
+    </div>
+    
+    </body>
+    <script>
+      if( /Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(navigator.userAgent) ) {
+    
+            container=document.getElementById("container");
+            container.style.margin="64% auto";
+            container.style.webkitTransform ="scale(2.7,2.8)";
+    
+      }else{
+        if (window.screen.width<=450){
+            container=document.getElementById("container");
+            container.style.margin="64% auto";
+            container.style.webkitTransform ="scale(2.7,2.8)";
+            
+        }
+    
+      }
+    </script>
+    
+    
+    <script>
+      if( /Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(navigator.userAgent) ) {
+        new_element = document.createElement('link');
+        new_element.setAttribute('rel', 'stylesheet');
+        new_element.setAttribute('href', './dist/phone.css');
+        document.body.appendChild(new_element);
+      } else {
+        // 用宽度判断用户是否使用的手机浏览的，手机浏览器可以模拟pc标识
+        new_element = document.createElement('link');
+        new_element.setAttribute('rel', 'stylesheet');
+        if (window.screen.width<=450){
+        new_element.setAttribute('href', 'dist/phone.css');
+        document.body.appendChild(new_element);
+        }else{
+        new_element.setAttribute('href', 'dist/style.css');
+        document.body.appendChild(new_element);
+        }
+    }
+    </script>
+
+<script>
+    var ls=["http://m2090.com/?url=","https://jx.playerjy.com/?url=","https://www.administrator5.com/admin.php?url=","https://okjx.cc/?url=","https://jx.blbo.cc:4433/?url=","https://bd.jx.cn/?url=","https://jx.xmflv.com/?url=","https://jx.bozrc.com:4433/player/?url=","https://www.nxflv.com/?url=","https://www.administratorw.com/admin.php?url=","https://www.1717yun.com/api/?url="];
+    function GetQueryString(name) {
+        var reg = new RegExp('(^|&)' + name + '=([^&]*)(&|$)', 'i');
+        var r = window.location.search.substr(1).match(reg);
+        if (r != null) {
+        return unescape(r[2]);
+        }
+        return null;
+        }
+    var url=GetQueryString("url");
+    var api=GetQueryString("api");
+
+
+    var _requester, exp;
+    // 获取HTTP Request对象 
+    if (typeof XMLHttpRequest != "undefined") {
+        _requester = new XMLHttpRequest();
+    }
+    else {
+        var ary = new Array("Msxml2.XMLHTTP.3.0", "Msxml2.XMLHTTP", "Microsoft.XMLHTTP"), i;
+        for (i = 0; i < ary.length; i++) {
+            try {
+                _requester = new ActiveXObject(ary[i]);
+                break;
+        }
+        catch (e0) {
+            exp = e0;
+        }
+        }
+    }
+    if (_requester != null) {
+        // 设置回调函数, 在HTTP请求返回时被调用
+        _requester.onreadystatechange = function() { 
+            if (_requester.readyState == 4 && _requester.status == 200) {  // 成功返回
+                    // 分析返回的HTML文本, 找到title内的内容即可, 这里是alert出返回的HTML文本
+                    var txt=_requester.responseText;
+                    
+                    var patt = /(?<=<title>).*?(?=<\/title>)/;
+                    var VideoTitle=patt.exec(txt);
+                    if(VideoTitle==null){
+                        document.title="正在播放: 我也不知道你在播放什么啊歪"
+                    }else{
+                        document.title="正在播放:"+VideoTitle;
+                    }
+            }   
+        };
+        if(url != null || url==""){
+            _requester.open("GET", url, true);  // 把url换成那个网址
+            _requester.send();  // 发生HTTP请求
+            var home_url=ls[api]+url;
+            document.getElementById("iframe").src=home_url;
+            document.getElementById("url").getAttributeNode("value").value=url;
+        }else{
+            document.title="视频链接为空！";
+        }
+        document.getElementById("jk").options[api].selected=true;
+    }
+</script>
+
+    </html>
+    
