@@ -358,7 +358,8 @@
         }else{
             document.getElementById("title-name").innerHTML="视频链接为空！";
         }
-        document.getElementById("jk").options[api].selected=true;
+        if(api==null || api==''){document.getElementById('jk').options[0].selected=true;}else{
+        document.getElementById("jk").options[api].selected=true;}
     }
 </script>
 
