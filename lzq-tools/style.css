@@ -50,6 +50,10 @@ body
 {
  border-radius: 42% 58% 52% 48% / 72% 30% 70% 28%;
 }
+.container .drop:nth-child(4)
+{
+ border-radius: 42% 58% 52% 50% / 72% 30% 70% 28%;
+}
 .container .drop:hover 
 {
  border-radius: 50%;
