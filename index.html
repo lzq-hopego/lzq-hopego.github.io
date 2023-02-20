@@ -269,6 +269,119 @@
             
 
   
+    <article id="post-mysql安装时的坑" class="article article-type-post  article-index" itemscope itemprop="blogPost">
+  <div class="article-inner">
+    
+      <header class="article-header">
+  
+  
+    <h1 itemprop="name">
+	
+	  <a class="article-title" href="/2023/02/20/mysql%E5%AE%89%E8%A3%85%E6%97%B6%E7%9A%84%E5%9D%91/" target="_blank">mysql安装时的坑</a>
+  
+    </h1>
+  
+
+
+  
+  
+<a href="/2023/02/20/mysql%E5%AE%89%E8%A3%85%E6%97%B6%E7%9A%84%E5%9D%91/" class="archive-article-date">
+        <time datetime="2023-02-20T14:12:48.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2023-02-20</time>
+</a>
+
+  
+  
+    
+
+  
+  </header>
+  
+  <div class="article-entry" itemprop="articleBody">
+    
+    <h1 id="MySQL安装时踩的坑"><a href="#MySQL安装时踩的坑" class="headerlink" title="MySQL安装时踩的坑"></a>MySQL安装时踩的坑</h1><p><em>使用管理员权限命令行打开MySQL的解压目录</em></p>
+<ul>
+<li>使用以下命令进行数据库初始化<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">mysqld --initialize --console</span><br></pre></td></tr></table></figure></li>
+<li>执行完毕后会返回，如下数据，最后几位则是密码 <strong>APWCY5ws&amp;hjQ</strong> <figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">2018-04-20T02:35:05.464644Z 5 [Note] [MY-010454] [Server] A temporary password is generated for root@localhost: APWCY5ws&amp;hjQ</span><br></pre></td></tr></table></figure></li>
+<li>随后执行下面的命令进行初始化<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">mysqld install</span><br></pre></td></tr></table></figure></li>
+<li>如果你是第二次安装，会提示如下<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">The service already exists!</span><br></pre></td></tr></table></figure></li>
+<li>这是因为你之前mysql没有卸载干净，使用如下命令，删除mysql，即可继续安装<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">sc delete mysql</span><br></pre></td></tr></table></figure></li>
+<li>安装完成后，再开一个cmd(管理员身份)<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"># 启动mysql服务</span><br><span class="line">net start mysql   </span><br><span class="line"># 关闭mysql服务</span><br><span class="line">net stop mysql</span><br></pre></td></tr></table></figure></li>
+</ul>
+<p>*如果你觉的默认的密码太长了，可以登入mysql之后使用下面的命令进行更改</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">mysql&gt; ALTER USER &#x27;root&#x27;@&#x27;localhost&#x27; IDENTIFIED BY &#x27;123456&#x27;;</span><br></pre></td></tr></table></figure>
+
+    
+
+    
+
+    
+
+  </div>
+  <div class="article-info article-info-index">
+    
+    
+	<div class="article-tag tagcloud">
+		<i class="icon-price-tags icon"></i>
+		<ul class="article-tag-list">
+			 
+        		<li class="article-tag-list-item">
+        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color3">随笔</a>
+        		</li>
+      		 
+        		<li class="article-tag-list-item">
+        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color1">mysql</a>
+        		</li>
+      		 
+        		<li class="article-tag-list-item">
+        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color5">mysql更改密码</a>
+        		</li>
+      		 
+        		<li class="article-tag-list-item">
+        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color5">关闭mysql服务</a>
+        		</li>
+      		
+		</ul>
+	</div>
+
+    
+
+    
+    <p class="article-more-link">
+      <a class="article-more-a" href="/2023/02/20/mysql%E5%AE%89%E8%A3%85%E6%97%B6%E7%9A%84%E5%9D%91/">展开全文 >></a>
+    </p>
+    
+
+    
+    <div class="clearfix"></div>
+  </div>
+  </div>
+</article>
+
+<aside class="wrap-side-operation">
+    <div class="mod-side-operation">
+        
+        <div class="jump-container" id="js-jump-container" style="display:none;">
+            <a href="javascript:void(0)" class="mod-side-operation__jump-to-top">
+                <i class="icon-font icon-back"></i>
+            </a>
+            <div id="js-jump-plan-container" class="jump-plan-container" style="top: -11px;">
+                <i class="icon-font icon-plane jump-plane"></i>
+            </div>
+        </div>
+        
+        
+    </div>
+</aside>
+
+
+
+
+
+<!-- beaudar评论插件 -->
+
+  
+
+  
     <article id="post-get-music-lizhanqi的使用方法，酷狗，网易云，多合一下载" class="article article-type-post  article-index" itemscope itemprop="blogPost">
   <div class="article-inner">
     
@@ -628,6 +741,18 @@
              
               <li class="article-tag-list-item">
                 <a href="javascript:void(0)" class="js-tag color3">随笔</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color1">mysql</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color5">mysql更改密码</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color5">关闭mysql服务</a>
               </li>
             
             <div class="clearfix"></div>
