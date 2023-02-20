@@ -2,7 +2,7 @@
 <html lang="en">
     <head>
       <meta charset="UTF-8">
-      <link rel="icon" type="image/ico" href="./f3.ico"/>
+      <link rel="icon" type="image/ico" href="./img/favicon.ico"/>
       <title>视频解析</title>
       <style>
         html{
@@ -113,7 +113,7 @@
     </script>
 
 <script>
-    var ls=["https://m2090.com/?url=","https://jx.playerjy.com/?url=","https://www.administrator5.com/admin.php?url=","https://okjx.cc/?url=","https://jx.blbo.cc:4433/?url=","https://bd.jx.cn/?url=","https://jx.xmflv.com/?url=","https://jx.bozrc.com:4433/player/?url=","https://www.nxflv.com/?url=","https://www.administratorw.com/admin.php?url=","https://www.1717yun.com/api/?url="];
+    var ls=["http://m2090.com/?url=","https://jx.playerjy.com/?url=","https://www.administrator5.com/admin.php?url=","https://okjx.cc/?url=","https://jx.blbo.cc:4433/?url=","https://bd.jx.cn/?url=","https://jx.xmflv.com/?url=","https://jx.bozrc.com:4433/player/?url=","https://www.nxflv.com/?url=","https://www.administratorw.com/admin.php?url=","https://www.1717yun.com/api/?url="];
     function GetQueryString(name) {
         var reg = new RegExp('(^|&)' + name + '=([^&]*)(&|$)', 'i');
         var r = window.location.search.substr(1).match(reg);
@@ -124,7 +124,9 @@
         }
     var url=GetQueryString("url");
     var api=GetQueryString("api");
-
+    if (api == null){
+            api=0;
+        }
 
     var _requester, exp;
     // 获取HTTP Request对象 
