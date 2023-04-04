@@ -6,17 +6,29 @@
   <meta name="renderer" content="webkit">
   <meta http-equiv="X-UA-Compatible" content="IE=edge" >
   <link rel="dns-prefetch" href="https://lzq-hopego.github.io">
-  <title>Tag: RHEL | Li Zhan Qi</title>
+  <title>ventoy创建多个pe引导,并使用主题美化ventoy | Li Zhan Qi</title>
   <meta name="generator" content="hexo-theme-yilia-plus">
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
   
-  <meta property="og:type" content="website">
-<meta property="og:title" content="Li Zhan Qi">
-<meta property="og:url" content="https://lzq-hopego.github.io/tags/RHEL/index.html">
+  <meta name="description" content="使用ventoy安装多个pe引导 安装多个pe的作用旨在适配多种机型，比如机型较老的，或者机型太新的，本教程使用两种pe，一个是微pe一个是杏雨梨花的pe，这两个pe基本能够维护到所有的机型">
+<meta property="og:type" content="article">
+<meta property="og:title" content="ventoy创建多个pe引导,并使用主题美化ventoy">
+<meta property="og:url" content="https://lzq-hopego.github.io/2023/04/04/ventoy%E5%88%9B%E5%BB%BA%E5%A4%9A%E4%B8%AApe%E5%BC%95%E5%AF%BC-%E5%B9%B6%E4%BD%BF%E7%94%A8%E4%B8%BB%E9%A2%98%E7%BE%8E%E5%8C%96ventoy/index.html">
 <meta property="og:site_name" content="Li Zhan Qi">
+<meta property="og:description" content="使用ventoy安装多个pe引导 安装多个pe的作用旨在适配多种机型，比如机型较老的，或者机型太新的，本教程使用两种pe，一个是微pe一个是杏雨梨花的pe，这两个pe基本能够维护到所有的机型">
 <meta property="og:locale" content="zh_CN">
+<meta property="og:image" content="https://s1.ax1x.com/2023/04/04/pp4urVI.jpg">
+<meta property="og:image" content="https://s1.ax1x.com/2023/04/04/pp4uyIP.jpg">
+<meta property="og:image" content="https://s1.ax1x.com/2023/04/04/pp4uqRU.jpg">
+<meta property="og:image" content="https://s1.ax1x.com/2023/04/04/pp4uLzF.jpg">
+<meta property="article:published_time" content="2023-04-04T00:53:08.000Z">
+<meta property="article:modified_time" content="2023-04-04T00:54:17.654Z">
 <meta property="article:author" content="Li Zhan Qi">
+<meta property="article:tag" content="随笔">
+<meta property="article:tag" content="ventoy">
+<meta property="article:tag" content="pe">
 <meta name="twitter:card" content="summary">
+<meta name="twitter:image" content="https://s1.ax1x.com/2023/04/04/pp4urVI.jpg">
   
     <link rel="alternative" href="/atom.xml" title="Li Zhan Qi" type="application/atom+xml">
   
@@ -262,81 +274,274 @@
               class="anm-canvas"></canvas>
           </div>
           <div id="js-content" class="content-ll">
-            
-  
-  
+            <article id="post-ventoy创建多个pe引导-并使用主题美化ventoy" class="article article-type-post " itemscope itemprop="blogPost">
+  <div class="article-inner">
     
-    
-      
-      
-      <section class="archives-wrap">
-        <div class="archive-year-wrap">
-          <a href="/archives/2023" class="archive-year">2023</a>
-        </div>
-        <div class="archives">
-    
-    <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-      	<div class="article-meta">
-	      	
-<a href="/2023/03/11/%E5%9C%A8RHEL%E7%B3%BB%E7%BB%9F%E4%B8%AD%E4%BD%BF%E7%94%A8%E6%BA%90%E7%A0%81%E5%AE%89%E8%A3%85python/" class="archive-article-date">
-        <time datetime="2023-03-11T13:59:46.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2023-03-11</time>
-</a>
-
-        </div>
-    	 
+      <header class="article-header">
   
-    <h1 itemprop="name">
-	
-	  <a class="archive-article-title" href="/2023/03/11/%E5%9C%A8RHEL%E7%B3%BB%E7%BB%9F%E4%B8%AD%E4%BD%BF%E7%94%A8%E6%BA%90%E7%A0%81%E5%AE%89%E8%A3%85python/" target="_blank">在RHEL系统中使用源码安装python</a>
   
+    <h1 class="article-title" itemprop="name">
+      ventoy创建多个pe引导,并使用主题美化ventoy
     </h1>
   
 
 
-        <div class="article-info info-on-right">
+  
+  
+        
+        <span id="busuanzi_container_page_pv" style='display:none' class="archive-article-date">
+              <i class="icon-smile icon"></i> 阅读数：<span id="busuanzi_value_page_pv"></span>次
+        </span>
+
+<a href="/2023/04/04/ventoy%E5%88%9B%E5%BB%BA%E5%A4%9A%E4%B8%AApe%E5%BC%95%E5%AF%BC-%E5%B9%B6%E4%BD%BF%E7%94%A8%E4%B8%BB%E9%A2%98%E7%BE%8E%E5%8C%96ventoy/" class="archive-article-date">
+        <time datetime="2023-04-04T00:53:08.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2023-04-04</time>
+</a>
+
+  
+  
+    
+<div style="margin-top:10px;">
+  <span class="post-time">
+    <span class="post-meta-item-icon">
+      <!-- fonts.scss -->
+      <!-- 百度字体平台:http://fontstore.baidu.com/static/editor/index.html -->
+      <i class="icon-statistics"></i>
+      <span class="post-meta-item-text"> 字数统计:</span>
+      <span class="post-count">454字</span>
+    </span>
+  </span>
+
+  <span class="post-time">
+    &nbsp; | &nbsp;
+    <span class="post-meta-item-icon">
+      <i class="icon-book icon"></i>
+      <span class="post-meta-item-text"> 阅读时长≈</span>
+      <span class="post-count">1分</span>
+    </span>
+  </span>
+</div>
+
+
+  
+  </header>
+  
+  <div class="article-entry" itemprop="articleBody">
+    
+    <h1 id="使用ventoy安装多个pe引导"><a href="#使用ventoy安装多个pe引导" class="headerlink" title="使用ventoy安装多个pe引导"></a>使用ventoy安装多个pe引导</h1><blockquote>
+<p>安装多个pe的作用旨在适配多种机型，比如机型较老的，或者机型太新的，本教程使用两种pe，一个是微pe一个是杏雨梨花的pe，这两个pe基本能够维护到所有的机型</p>
+</blockquote>
+<span id="more"></span>
+<h2 id="第一步、下载ventoy"><a href="#第一步、下载ventoy" class="headerlink" title="第一步、下载ventoy"></a>第一步、下载ventoy</h2><ul>
+<li>下载地址: <a target="_blank" rel="noopener" href="https://www.ventoy.net/cn/download.html">ventoy</a></li>
+</ul>
+<h3 id="1、插入u盘使用Ventoy2Disk-exe安装到u盘"><a href="#1、插入u盘使用Ventoy2Disk-exe安装到u盘" class="headerlink" title="1、插入u盘使用Ventoy2Disk.exe安装到u盘"></a>1、插入u盘使用Ventoy2Disk.exe安装到u盘</h3><p><a target="_blank" rel="noopener" href="https://imgse.com/i/pp4urVI"><img src="https://s1.ax1x.com/2023/04/04/pp4urVI.jpg" alt="pp4urVI.jpg"></a></p>
+<h3 id="2、双击打开后选择安装即可，如果有其他需求可以尝试在配置选项中修改"><a href="#2、双击打开后选择安装即可，如果有其他需求可以尝试在配置选项中修改" class="headerlink" title="2、双击打开后选择安装即可，如果有其他需求可以尝试在配置选项中修改"></a>2、双击打开后选择安装即可，如果有其他需求可以尝试在配置选项中修改</h3><p><a target="_blank" rel="noopener" href="https://imgse.com/i/pp4uyIP"><img src="https://s1.ax1x.com/2023/04/04/pp4uyIP.jpg" alt="pp4uyIP.jpg"></a></p>
+<h2 id="第二步、下载微pe生成ISO文件"><a href="#第二步、下载微pe生成ISO文件" class="headerlink" title="第二步、下载微pe生成ISO文件"></a>第二步、下载微pe生成ISO文件</h2><ul>
+<li>下载地址:<a target="_blank" rel="noopener" href="https://www.wepe.com.cn/">wepe</a></li>
+</ul>
+<h2 id="第三步、下载杏雨梨云，并使用它的工具生成iso文件"><a href="#第三步、下载杏雨梨云，并使用它的工具生成iso文件" class="headerlink" title="第三步、下载杏雨梨云，并使用它的工具生成iso文件"></a>第三步、下载杏雨梨云，并使用它的工具生成iso文件</h2><ul>
+<li>下载地址:<a target="_blank" rel="noopener" href="https://www.xyboot.com/">杏雨梨云</a></li>
+</ul>
+<h2 id="第四步、把生成的iso文件全部放到ventoy-u盘的根目录下即可直接启动"><a href="#第四步、把生成的iso文件全部放到ventoy-u盘的根目录下即可直接启动" class="headerlink" title="第四步、把生成的iso文件全部放到ventoy u盘的根目录下即可直接启动"></a>第四步、把生成的iso文件全部放到ventoy u盘的根目录下即可直接启动</h2><blockquote>
+<p>教程到这里已经结束了</p>
+</blockquote>
+<h2 id="如果你还想对ventoy进行个性化的话官方提供的文档是支持的"><a href="#如果你还想对ventoy进行个性化的话官方提供的文档是支持的" class="headerlink" title="如果你还想对ventoy进行个性化的话官方提供的文档是支持的"></a>如果你还想对ventoy进行个性化的话官方提供的文档是支持的</h2><ul>
+<li>文档地址:<a target="_blank" rel="noopener" href="https://ventoy.net/cn/doc_news.html">ventoy文档</a></li>
+<li>主题市场:<a target="_blank" rel="noopener" href="https://www.gnome-look.org/browse?cat=109&ord=latest">ventoy主题</a></li>
+</ul>
+<h2 id="修改ventoy的参数，可以使用ventoy压缩包中的VentoyPlugson-exe-插入u盘，双击打开"><a href="#修改ventoy的参数，可以使用ventoy压缩包中的VentoyPlugson-exe-插入u盘，双击打开" class="headerlink" title="修改ventoy的参数，可以使用ventoy压缩包中的VentoyPlugson.exe,插入u盘，双击打开"></a>修改ventoy的参数，可以使用ventoy压缩包中的VentoyPlugson.exe,插入u盘，双击打开</h2><p><a target="_blank" rel="noopener" href="https://imgse.com/i/pp4uqRU"><img src="https://s1.ax1x.com/2023/04/04/pp4uqRU.jpg" alt="pp4uqRU.jpg"></a></p>
+<blockquote>
+<p>打开之后，点击启动,就会在本地生成一个web服务，可以在网页中修改它的参数</p>
+</blockquote>
+<p><a target="_blank" rel="noopener" href="https://imgse.com/i/pp4uLzF"><img src="https://s1.ax1x.com/2023/04/04/pp4uLzF.jpg" alt="pp4uLzF.jpg"></a></p>
+<blockquote>
+<p>也可以在u盘的根目录下找到ventoy文件夹中的ventoy.json,修改它的值也行，我的json值，如下</p>
+</blockquote>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br></pre></td><td class="code"><pre><span class="line">&#123;</span><br><span class="line">    &quot;control&quot;:[</span><br><span class="line">        &#123; &quot;VTOY_MAX_SEARCH_LEVEL&quot;: &quot;0&quot; &#125;,</span><br><span class="line">        &#123; &quot;VTOY_MENU_LANGUAGE&quot;: &quot;zh_CN&quot; &#125;</span><br><span class="line">    ],</span><br><span class="line">    &quot;theme&quot;:&#123;</span><br><span class="line">        &quot;file&quot;:[</span><br><span class="line">            &quot;/Okita Souji (Version 2)/Okita-V_2/theme.txt&quot;,</span><br><span class="line">            &quot;/Doki Doki Literature Club (Chibi Version)/Chibi-DDLC-Version/theme.txt&quot;,</span><br><span class="line">            &quot;/kali-1080p/darkmatter/theme.txt&quot;,</span><br><span class="line">            &quot;/steamos-1080p/darkmatter/theme.txt&quot;,</span><br><span class="line">            &quot;/ventoy_1/ventoy/purple-theme/theme.txt&quot;</span><br><span class="line">        ],</span><br><span class="line">        &quot;default_file&quot;: 5,</span><br><span class="line">        &quot;gfxmode&quot;: &quot;1920x1080&quot;,</span><br><span class="line">        &quot;fonts&quot;:[</span><br><span class="line">            &quot;/fonts/SIMYOU.TTF&quot;</span><br><span class="line">        ]</span><br><span class="line">    &#125;,</span><br><span class="line">    &quot;password&quot;:&#123;</span><br><span class="line">        &quot;bootpwd&quot;: &quot;txt#lizhanqi0228&quot;</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<blockquote>
+<p>教程到这里就结束啦！</p>
+</blockquote>
+
+    
+
+    
+
+    
+    <div class="declare"> 
+      <ul class="post-copyright">
+        <li>
+          <strong>本文作者：</strong>
+          Li Zhan Qi
+        </li>
+        <li>
+          <strong>本文链接：</strong>
+          <a href="https://lzq-hopego.github.io/2023/04/04/ventoy创建多个pe引导-并使用主题美化ventoy/" title="ventoy创建多个pe引导,并使用主题美化ventoy" target="_blank">https://lzq-hopego.github.io/2023/04/04/ventoy创建多个pe引导-并使用主题美化ventoy/</a>
+        </li>
+        
+        <li>
+          <strong>版权声明： </strong>
           
+          本博客所有文章除特别声明外，均采用 <a href="https://github.com/JoeyBling/hexo-theme-yilia-plus/blob/master/LICENSE" rel="external nofollow" target="_blank">MIT</a> 许可协议。转载请注明出处！
+        </li>
+        
+      </ul>
+    </div>
+    
+
+  </div>
+  <div class="article-info article-info-index">
+    
+    
 	<div class="article-tag tagcloud">
 		<i class="icon-price-tags icon"></i>
 		<ul class="article-tag-list">
 			 
         		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color2">python</a>
-        		</li>
-      		 
-        		<li class="article-tag-list-item">
         			<a href="javascript:void(0)" class="js-tag article-tag-list-link color3">随笔</a>
         		</li>
       		 
         		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color1">Linux</a>
+        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color2">ventoy</a>
         		</li>
       		 
         		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color5">RHEL</a>
-        		</li>
-      		 
-        		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color3">安装</a>
+        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color3">pe</a>
         		</li>
       		
 		</ul>
 	</div>
 
-          
-
-        </div>
-        <div class="clearfix"></div>
-    </header>
-  </div>
-</article>
-  
-  
-    </div></section>
-  
+    
 
     
+
+    
+    
+<div class="share-btn share-icons tooltip-left">
+  <div class="tooltip tooltip-east">
+    <span class="tooltip-item">
+      <a href="javascript:;" class="share-sns share-outer">
+        <i class="icon icon-share"></i>
+      </a>
+    </span>
+    <span class="tooltip-content">
+      <div class="share-wrap">
+        <div class="share-icons">
+          <a class="weibo share-sns" href="javascript:;" data-type="weibo">
+            <i class="icon icon-weibo"></i>
+          </a>
+          <!-- <a class="weixin share-sns wxFab" href="javascript:;" data-type="weixin">
+            <i class="icon icon-weixin"></i>
+          </a> -->
+          <a class="qq share-sns" href="javascript:;" data-type="qq">
+            <i class="icon icon-qq"></i>
+          </a>
+          <a class="douban share-sns" href="javascript:;" data-type="douban">
+            <i class="icon icon-douban"></i>
+          </a>
+          <a class="qzone share-sns" href="javascript:;" data-type="qzone">
+            <i class="icon icon-qzone"></i>
+          </a>
+          <a class="facebook share-sns" href="javascript:;" data-type="facebook">
+            <i class="icon icon-facebook"></i>
+          </a>
+          <a class="twitter share-sns" href="javascript:;" data-type="twitter">
+            <i class="icon icon-twitter"></i>
+          </a>
+          <a class="google share-sns" href="javascript:;" data-type="google">
+            <i class="icon icon-google"></i>
+          </a>
+        </div>
+      </div>
+    </span>
+  </div>
+</div>
+
+<div class="page-modal wx-share js-wx-box">
+    <a class="close js-modal-close" href="javascript:;"><i class="icon icon-close"></i></a>
+    <p>扫一扫，分享到微信</p>
+    <div class="wx-qrcode">
+     <!-- <img src="//pan.baidu.com/share/qrcode?url=https://lzq-hopego.github.io/2023/04/04/ventoy%E5%88%9B%E5%BB%BA%E5%A4%9A%E4%B8%AApe%E5%BC%95%E5%AF%BC-%E5%B9%B6%E4%BD%BF%E7%94%A8%E4%B8%BB%E9%A2%98%E7%BE%8E%E5%8C%96ventoy/" alt="微信分享二维码"> -->
+    </div>
+</div>
+
+<div class="mask js-mask"></div>
+
+    
+    <div class="clearfix"></div>
+  </div>
+  </div>
+</article>
+
+
+<nav id="article-nav">
+  
+  
+    <a href="/2023/03/20/%E7%99%BD%E5%AB%96%E6%A0%A1%E5%9B%AD%E7%BD%91/" id="article-nav-older" class="article-nav-link-wrap">
+      <div class="article-nav-title">白嫖校园网</div>
+      <i class="icon-circle-right"></i>
+    </a>
+  
+</nav>
+
+
+<aside class="wrap-side-operation">
+    <div class="mod-side-operation">
+        
+        <div class="jump-container" id="js-jump-container" style="display:none;">
+            <a href="javascript:void(0)" class="mod-side-operation__jump-to-top">
+                <i class="icon-font icon-back"></i>
+            </a>
+            <div id="js-jump-plan-container" class="jump-plan-container" style="top: -11px;">
+                <i class="icon-font icon-plane jump-plane"></i>
+            </div>
+        </div>
+        
+        
+        <div class="toc-container tooltip-left">
+            <i class="icon-font icon-category"></i>
+            <div class="tooltip tooltip-east">
+                <span class="tooltip-item">
+                </span>
+                <span class="tooltip-content">
+                    <div class="toc-article">
+                    <ol class="toc"><li class="toc-item toc-level-1"><a class="toc-link" href="#%E4%BD%BF%E7%94%A8ventoy%E5%AE%89%E8%A3%85%E5%A4%9A%E4%B8%AApe%E5%BC%95%E5%AF%BC"><span class="toc-number">1.</span> <span class="toc-text">使用ventoy安装多个pe引导</span></a><ol class="toc-child"><li class="toc-item toc-level-2"><a class="toc-link" href="#%E7%AC%AC%E4%B8%80%E6%AD%A5%E3%80%81%E4%B8%8B%E8%BD%BDventoy"><span class="toc-number">1.1.</span> <span class="toc-text">第一步、下载ventoy</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#1%E3%80%81%E6%8F%92%E5%85%A5u%E7%9B%98%E4%BD%BF%E7%94%A8Ventoy2Disk-exe%E5%AE%89%E8%A3%85%E5%88%B0u%E7%9B%98"><span class="toc-number">1.1.1.</span> <span class="toc-text">1、插入u盘使用Ventoy2Disk.exe安装到u盘</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#2%E3%80%81%E5%8F%8C%E5%87%BB%E6%89%93%E5%BC%80%E5%90%8E%E9%80%89%E6%8B%A9%E5%AE%89%E8%A3%85%E5%8D%B3%E5%8F%AF%EF%BC%8C%E5%A6%82%E6%9E%9C%E6%9C%89%E5%85%B6%E4%BB%96%E9%9C%80%E6%B1%82%E5%8F%AF%E4%BB%A5%E5%B0%9D%E8%AF%95%E5%9C%A8%E9%85%8D%E7%BD%AE%E9%80%89%E9%A1%B9%E4%B8%AD%E4%BF%AE%E6%94%B9"><span class="toc-number">1.1.2.</span> <span class="toc-text">2、双击打开后选择安装即可，如果有其他需求可以尝试在配置选项中修改</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E7%AC%AC%E4%BA%8C%E6%AD%A5%E3%80%81%E4%B8%8B%E8%BD%BD%E5%BE%AEpe%E7%94%9F%E6%88%90ISO%E6%96%87%E4%BB%B6"><span class="toc-number">1.2.</span> <span class="toc-text">第二步、下载微pe生成ISO文件</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E7%AC%AC%E4%B8%89%E6%AD%A5%E3%80%81%E4%B8%8B%E8%BD%BD%E6%9D%8F%E9%9B%A8%E6%A2%A8%E4%BA%91%EF%BC%8C%E5%B9%B6%E4%BD%BF%E7%94%A8%E5%AE%83%E7%9A%84%E5%B7%A5%E5%85%B7%E7%94%9F%E6%88%90iso%E6%96%87%E4%BB%B6"><span class="toc-number">1.3.</span> <span class="toc-text">第三步、下载杏雨梨云，并使用它的工具生成iso文件</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E7%AC%AC%E5%9B%9B%E6%AD%A5%E3%80%81%E6%8A%8A%E7%94%9F%E6%88%90%E7%9A%84iso%E6%96%87%E4%BB%B6%E5%85%A8%E9%83%A8%E6%94%BE%E5%88%B0ventoy-u%E7%9B%98%E7%9A%84%E6%A0%B9%E7%9B%AE%E5%BD%95%E4%B8%8B%E5%8D%B3%E5%8F%AF%E7%9B%B4%E6%8E%A5%E5%90%AF%E5%8A%A8"><span class="toc-number">1.4.</span> <span class="toc-text">第四步、把生成的iso文件全部放到ventoy u盘的根目录下即可直接启动</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E5%A6%82%E6%9E%9C%E4%BD%A0%E8%BF%98%E6%83%B3%E5%AF%B9ventoy%E8%BF%9B%E8%A1%8C%E4%B8%AA%E6%80%A7%E5%8C%96%E7%9A%84%E8%AF%9D%E5%AE%98%E6%96%B9%E6%8F%90%E4%BE%9B%E7%9A%84%E6%96%87%E6%A1%A3%E6%98%AF%E6%94%AF%E6%8C%81%E7%9A%84"><span class="toc-number">1.5.</span> <span class="toc-text">如果你还想对ventoy进行个性化的话官方提供的文档是支持的</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E4%BF%AE%E6%94%B9ventoy%E7%9A%84%E5%8F%82%E6%95%B0%EF%BC%8C%E5%8F%AF%E4%BB%A5%E4%BD%BF%E7%94%A8ventoy%E5%8E%8B%E7%BC%A9%E5%8C%85%E4%B8%AD%E7%9A%84VentoyPlugson-exe-%E6%8F%92%E5%85%A5u%E7%9B%98%EF%BC%8C%E5%8F%8C%E5%87%BB%E6%89%93%E5%BC%80"><span class="toc-number">1.6.</span> <span class="toc-text">修改ventoy的参数，可以使用ventoy压缩包中的VentoyPlugson.exe,插入u盘，双击打开</span></a></li></ol></li></ol>
+                    </div>
+                </span>
+            </div>
+        </div>
+        
+    </div>
+</aside>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<!-- beaudar评论插件 -->
+
+  
+	<div id="beaudar-comment">
+		<link rel="stylesheet" href="/lib/beaudar.css"> <!--这里是我自己的css文件，如果你没有弄的话，可以不写。-->
+		<script src="https://beaudar.lipk.org/client.js" 
+				repo="lzq-hopego/lzq-hopego.github.io" 
+				issue-term="pathname"
+				label="comment"
+				theme="github-light"
+				branch="main"
+				crossorigin="anonymous" async>
+			</script>
+	</div>
 
 
           </div>
@@ -372,9 +577,9 @@
 	var yiliaConfig = {
 		mathjax: false,
 		isHome: false,
-		isPost: false,
+		isPost: true,
 		isArchive: false,
-		isTag: true,
+		isTag: false,
 		isCategory: false,
 		open_in_new: true,
 		toc_hide_index: true,
