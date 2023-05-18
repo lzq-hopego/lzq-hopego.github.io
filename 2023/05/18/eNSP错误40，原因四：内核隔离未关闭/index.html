@@ -10,12 +10,12 @@
   <meta name="generator" content="hexo-theme-yilia-plus">
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
   
-  <meta name="description" content="eNSP错误40，原因四：内核隔离未关闭">
+  <meta name="description" content="以管理员身份启动cmd，输入   bcdedit    查看hypervisorlaunchtype  状态为off 1bcdedit">
 <meta property="og:type" content="article">
 <meta property="og:title" content="eNSP错误40，原因四：内核隔离未关闭">
 <meta property="og:url" content="https://lzq-hopego.github.io/2023/05/18/eNSP%E9%94%99%E8%AF%AF40%EF%BC%8C%E5%8E%9F%E5%9B%A0%E5%9B%9B%EF%BC%9A%E5%86%85%E6%A0%B8%E9%9A%94%E7%A6%BB%E6%9C%AA%E5%85%B3%E9%97%AD/index.html">
 <meta property="og:site_name" content="Li Zhan Qi">
-<meta property="og:description" content="eNSP错误40，原因四：内核隔离未关闭">
+<meta property="og:description" content="以管理员身份启动cmd，输入   bcdedit    查看hypervisorlaunchtype  状态为off 1bcdedit">
 <meta property="og:locale" content="zh_CN">
 <meta property="og:image" content="https://s1.ax1x.com/2023/05/18/p9fSLXn.png">
 <meta property="og:image" content="https://s1.ax1x.com/2023/05/18/p9fSXmq.png">
@@ -27,7 +27,7 @@
 <meta property="og:image" content="https://s1.ax1x.com/2023/05/18/p9fp3nI.md.png">
 <meta property="og:image" content="https://s1.ax1x.com/2023/05/18/p9fiOot.md.png">
 <meta property="article:published_time" content="2023-05-18T04:53:59.000Z">
-<meta property="article:modified_time" content="2023-05-18T04:54:42.222Z">
+<meta property="article:modified_time" content="2023-05-18T05:31:36.304Z">
 <meta property="article:author" content="Li Zhan Qi">
 <meta property="article:tag" content="随笔">
 <meta property="article:tag" content="eNSP">
@@ -311,7 +311,7 @@
       <!-- 百度字体平台:http://fontstore.baidu.com/static/editor/index.html -->
       <i class="icon-statistics"></i>
       <span class="post-meta-item-text"> 字数统计:</span>
-      <span class="post-count">136字</span>
+      <span class="post-count">123字</span>
     </span>
   </span>
 
@@ -331,10 +331,9 @@
   
   <div class="article-entry" itemprop="articleBody">
     
-    <h2 id="eNSP错误40，原因四：内核隔离未关闭"><a href="#eNSP错误40，原因四：内核隔离未关闭" class="headerlink" title="eNSP错误40，原因四：内核隔离未关闭"></a>eNSP错误40，原因四：内核隔离未关闭</h2><span id="more"></span>
-<p>以管理员身份启动cmd，输入   bcdedit    查看hypervisorlaunchtype  状态为off</p>
+    <p>以管理员身份启动cmd，输入   bcdedit    查看hypervisorlaunchtype  状态为off</p>
 <figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">bcdedit</span><br></pre></td></tr></table></figure>
-
+<span id="more"></span>
 <p><img src="https://s1.ax1x.com/2023/05/18/p9fSLXn.png" alt="p9fSLXn.png"></p>
 <p>打开cmd，输入systeminfo，显示Hyper-V要求如下图，则大概率是因为内核隔离未关闭</p>
 <p><img src="https://s1.ax1x.com/2023/05/18/p9fSXmq.png" alt="p9fSXmq.png"></p>
@@ -492,7 +491,7 @@
                 </span>
                 <span class="tooltip-content">
                     <div class="toc-article">
-                    <ol class="toc"><li class="toc-item toc-level-2"><a class="toc-link" href="#eNSP%E9%94%99%E8%AF%AF40%EF%BC%8C%E5%8E%9F%E5%9B%A0%E5%9B%9B%EF%BC%9A%E5%86%85%E6%A0%B8%E9%9A%94%E7%A6%BB%E6%9C%AA%E5%85%B3%E9%97%AD"><span class="toc-number">1.</span> <span class="toc-text">eNSP错误40，原因四：内核隔离未关闭</span></a></li></ol>
+                    目录，不存在的…
                     </div>
                 </span>
             </div>
@@ -514,8 +513,6 @@
 
 
 
-
-<!-- beaudar评论插件 -->
 
   
 	<div id="beaudar-comment">
