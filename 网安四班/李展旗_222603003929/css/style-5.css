@@ -1,0 +1,61 @@
+.sec6 {
+    background: linear-gradient(to right top, rgb(255, 187, 187), rgb(255, 102, 102));
+    min-height: 100vh;
+    background-size: 100%;
+    text-align: center;
+}
+/* div{
+    margin-top: 2px;
+    text-align: center;
+} */
+#url{
+    width: 63%;
+    height: 30px;
+    /* padding: 10px 20px; */
+    background: rgba(211, 86, 123, 0.3);
+    outline: none;
+    border: none;
+    border-radius: 30px;
+    border:1px solid rgba(255,255,255,0.5);
+    border-right:1px solid rgba(255,255,255,0.1);
+    border-bottom:1px solid rgba(255,255,255,0.1);
+    font-size: 16px;
+    letter-spacing: 1px;
+    color: #fff;
+    box-shadow: 0 5px 15px rgba(224, 116, 116, 0.05);
+    text-align: center;
+}
+#jk{
+    width: 8%;
+    height: 30px;
+    background: rgba(143, 230, 93, 0.3);
+    outline: none;
+    border: none;
+    border-radius: 30px;
+    border:1px solid rgba(255,255,255,0.5);
+    border-right:1px solid rgba(255,255,255,0.1);
+    border-bottom:1px solid rgba(255,255,255,0.1);
+    font-size: 16px;
+    letter-spacing: 1px;
+    color: rgb(109, 105, 105);
+    box-shadow: 0 5px 15px rgba(228, 30, 30, 0.05);
+    text-align: center;
+}
+button{
+    width: 8%;
+    height: 30px;
+    background: #fff;
+    color: #666;
+    /* max-width: 120px; */
+    font-weight: 600;
+    cursor: pointer;
+    border-radius: 30px;
+
+}
+#iframe{
+    border-radius: 2px;
+    margin: 0 auto;
+    width: 80%;
+    height: 90%;
+    font-size: 60px;
+}

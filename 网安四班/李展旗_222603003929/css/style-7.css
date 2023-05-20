@@ -1,0 +1,44 @@
+.sec7{
+    padding: 0;
+    overflow: hidden;
+    margin: 0;
+}
+
+
+.top {
+    width: 100%;
+    height: 100vh;
+    position: relative;
+    margin: 0 auto;
+}
+
+.new {
+    position: absolute;
+    left: 1%;
+    top: 0%;
+    width: 98%;
+}
+.autotype{
+    position: absolute;
+    left: 0%;
+    top: 30%;
+    width: 100%;
+    text-align: center;
+}
+.autotype p{
+    color:#fff;
+    font-size: 20px;
+}
+h2{
+    color: rgb(243, 56, 144);
+    font-size: 30px;
+}
+p{
+    color: ;
+}
+#beian123{
+    
+    
+    margin-top: 700px;
+    
+}
