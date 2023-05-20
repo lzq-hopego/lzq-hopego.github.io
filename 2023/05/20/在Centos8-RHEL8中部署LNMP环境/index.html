@@ -6,21 +6,53 @@
   <meta name="renderer" content="webkit">
   <meta http-equiv="X-UA-Compatible" content="IE=edge" >
   <link rel="dns-prefetch" href="https://lzq-hopego.github.io">
-  <title>Li Zhan Qi</title>
+  <title>在Centos8/RHEL8中部署LNMP环境 | Li Zhan Qi</title>
   <meta name="generator" content="hexo-theme-yilia-plus">
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
   
-    
-    <!-- <meta name="keywords" content="">
-    <meta name="description" content=""> -->
-  
-  <meta property="og:type" content="website">
-<meta property="og:title" content="Li Zhan Qi">
-<meta property="og:url" content="https://lzq-hopego.github.io/page/2/index.html">
+  <meta name="description" content="LNMP环境它指的是L(Linux系统)N(Nginx)M(Mysql)P(Php)">
+<meta property="og:type" content="article">
+<meta property="og:title" content="在Centos8&#x2F;RHEL8中部署LNMP环境">
+<meta property="og:url" content="https://lzq-hopego.github.io/2023/05/20/%E5%9C%A8Centos8-RHEL8%E4%B8%AD%E9%83%A8%E7%BD%B2LNMP%E7%8E%AF%E5%A2%83/index.html">
 <meta property="og:site_name" content="Li Zhan Qi">
+<meta property="og:description" content="LNMP环境它指的是L(Linux系统)N(Nginx)M(Mysql)P(Php)">
 <meta property="og:locale" content="zh_CN">
+<meta property="og:image" content="https://ucc.alicdn.com/pic/developer-ecology/5db758c46987419fb7ff4f288f334ecb.png">
+<meta property="og:image" content="https://ucc.alicdn.com/pic/developer-ecology/dfe28bf6262240548116a1a2c0176026.png">
+<meta property="og:image" content="https://ucc.alicdn.com/pic/developer-ecology/6610a864a5184aebaa4082f11867a29f.png">
+<meta property="og:image" content="https://ucc.alicdn.com/pic/developer-ecology/ef7d85c57e474cf8bdfbfd64885bac57.png">
+<meta property="og:image" content="https://ucc.alicdn.com/pic/developer-ecology/dfb264f7d0bf42c98525122ca9e5aca1.png">
+<meta property="og:image" content="https://s1.ax1x.com/2023/05/20/p94TqbD.md.jpg">
+<meta property="og:image" content="https://ucc.alicdn.com/pic/developer-ecology/4321541e3c0e41f59200cfad92013f38.png">
+<meta property="og:image" content="https://ucc.alicdn.com/pic/developer-ecology/d0b31cb77cd247c194a4c9b7f585b70c.png">
+<meta property="og:image" content="https://ucc.alicdn.com/pic/developer-ecology/7dca79e77df54409a655e95253d21834.png">
+<meta property="og:image" content="https://ucc.alicdn.com/pic/developer-ecology/965b2b2998344f75af5dcbb6dd9a6014.png">
+<meta property="og:image" content="https://lzq-hopego.github.io/">
+<meta property="og:image" content="https://ucc.alicdn.com/pic/developer-ecology/20cfc290f24f43eb859babf5e7fa824d.png">
+<meta property="og:image" content="https://ucc.alicdn.com/pic/developer-ecology/8e1487bce44646dfa9fb1f9568bcb45d.png">
+<meta property="og:image" content="https://ucc.alicdn.com/pic/developer-ecology/5e07f4b5091e44b89203f7807d9951af.png">
+<meta property="og:image" content="https://ucc.alicdn.com/pic/developer-ecology/38fc7568ec4b44d28daef3b22a4d4df8.png">
+<meta property="og:image" content="https://ucc.alicdn.com/pic/developer-ecology/733d5b3d29d54b448f4295daf7f44d06.png">
+<meta property="og:image" content="https://ucc.alicdn.com/pic/developer-ecology/10057d892a3d41c0b0defa1e46f12633.png">
+<meta property="og:image" content="https://ucc.alicdn.com/pic/developer-ecology/b58f88967a334635be04fed8d94a6660.png">
+<meta property="og:image" content="https://ucc.alicdn.com/pic/developer-ecology/e7c2f66679494a8b989bc0010a0ca1b5.png">
+<meta property="og:image" content="https://ucc.alicdn.com/pic/developer-ecology/25c88af578264eb1bc68c3b37e6d0ac3.png">
+<meta property="og:image" content="https://ucc.alicdn.com/pic/developer-ecology/4d1cc3731966423790ccc52389fe79b5.png">
+<meta property="og:image" content="https://ucc.alicdn.com/pic/developer-ecology/04c3595c546a40c6991606453d21aa70.png">
+<meta property="og:image" content="https://s1.ax1x.com/2023/05/20/p94HDXV.md.jpg">
+<meta property="og:image" content="https://s1.ax1x.com/2023/05/20/p94H46x.md.jpg">
+<meta property="og:image" content="https://s1.ax1x.com/2023/05/20/p94bVcq.md.png">
+<meta property="og:image" content="https://s1.ax1x.com/2023/05/20/p94bo2n.md.png">
+<meta property="article:published_time" content="2023-05-20T06:33:07.000Z">
+<meta property="article:modified_time" content="2023-05-20T06:34:33.510Z">
 <meta property="article:author" content="Li Zhan Qi">
+<meta property="article:tag" content="随笔">
+<meta property="article:tag" content="mysql">
+<meta property="article:tag" content="linux">
+<meta property="article:tag" content="nginx">
+<meta property="article:tag" content="php">
 <meta name="twitter:card" content="summary">
+<meta name="twitter:image" content="https://ucc.alicdn.com/pic/developer-ecology/5db758c46987419fb7ff4f288f334ecb.png">
   
     <link rel="alternative" href="/atom.xml" title="Li Zhan Qi" type="application/atom+xml">
   
@@ -266,464 +298,278 @@
               class="anm-canvas"></canvas>
           </div>
           <div id="js-content" class="content-ll">
-            
-
-  
-    <article id="post-白嫖校园网" class="article article-type-post  article-index" itemscope itemprop="blogPost">
+            <article id="post-在Centos8-RHEL8中部署LNMP环境" class="article article-type-post " itemscope itemprop="blogPost">
   <div class="article-inner">
     
       <header class="article-header">
   
   
-    <h1 itemprop="name">
-	
-	  <a class="article-title" href="/2023/03/20/%E7%99%BD%E5%AB%96%E6%A0%A1%E5%9B%AD%E7%BD%91/" target="_blank">白嫖校园网</a>
-  
+    <h1 class="article-title" itemprop="name">
+      在Centos8/RHEL8中部署LNMP环境
     </h1>
   
 
 
   
   
-<a href="/2023/03/20/%E7%99%BD%E5%AB%96%E6%A0%A1%E5%9B%AD%E7%BD%91/" class="archive-article-date">
-        <time datetime="2023-03-20T02:51:04.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2023-03-20</time>
+        
+        <span id="busuanzi_container_page_pv" style='display:none' class="archive-article-date">
+              <i class="icon-smile icon"></i> 阅读数：<span id="busuanzi_value_page_pv"></span>次
+        </span>
+
+<a href="/2023/05/20/%E5%9C%A8Centos8-RHEL8%E4%B8%AD%E9%83%A8%E7%BD%B2LNMP%E7%8E%AF%E5%A2%83/" class="archive-article-date">
+        <time datetime="2023-05-20T06:33:07.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2023-05-20</time>
 </a>
 
   
   
     
+<div style="margin-top:10px;">
+  <span class="post-time">
+    <span class="post-meta-item-icon">
+      <!-- fonts.scss -->
+      <!-- 百度字体平台:http://fontstore.baidu.com/static/editor/index.html -->
+      <i class="icon-statistics"></i>
+      <span class="post-meta-item-text"> 字数统计:</span>
+      <span class="post-count">2.7k字</span>
+    </span>
+  </span>
+
+  <span class="post-time">
+    &nbsp; | &nbsp;
+    <span class="post-meta-item-icon">
+      <i class="icon-book icon"></i>
+      <span class="post-meta-item-text"> 阅读时长≈</span>
+      <span class="post-count">11分</span>
+    </span>
+  </span>
+</div>
+
 
   
   </header>
   
   <div class="article-entry" itemprop="articleBody">
     
-    <h2 id="三门峡职业技术学院和河科大应用工程学院校园网认证问题"><a href="#三门峡职业技术学院和河科大应用工程学院校园网认证问题" class="headerlink" title="三门峡职业技术学院和河科大应用工程学院校园网认证问题"></a>三门峡职业技术学院和河科大应用工程学院校园网认证问题</h2><blockquote>
-<p>可以设置本程序五分钟执行一次以达到白嫖校园网的效果</p>
+    <h2 id="LNMP环境"><a href="#LNMP环境" class="headerlink" title="LNMP环境"></a>LNMP环境</h2><p>它指的是L(<strong>Linux系统</strong>)N(<strong>Nginx</strong>)M(<strong>Mysql</strong>)P(<strong>Php</strong>)</p>
+<span id="more"></span>
+<p>本次的环境使用的是阿里云的在线实验(在线实验链接):<br><a target="_blank" rel="noopener" href="https://developer.aliyun.com/adc/scenario/1295050220a64cb193d1cf3d810c9c8b?spm=a2c6h.14164896.0.0.4d1670bdKKE8SF">https://developer.aliyun.com/adc/scenario/1295050220a64cb193d1cf3d810c9c8b?spm=a2c6h.14164896.0.0.4d1670bdKKE8SF</a></p>
+<h2 id="准备"><a href="#准备" class="headerlink" title="准备"></a>准备</h2><ul>
+<li>使用xshell7(学生版)链接实验的实例</li>
+<li>使用xftp7(学生版)为实验实例上传文件</li>
+<li>准备一段php代码用以测试环境</li>
+</ul>
+<h2 id="第一步-CentOS-8切换源"><a href="#第一步-CentOS-8切换源" class="headerlink" title="第一步,CentOS 8切换源"></a>第一步,CentOS 8切换源</h2><ul>
+<li>因为centos8已经停止维护了，所以使用阿里云的镜像站</li>
+</ul>
+<h3 id="1、执行以下命令，备份之前的repo文件。"><a href="#1、执行以下命令，备份之前的repo文件。" class="headerlink" title="1、执行以下命令，备份之前的repo文件。"></a>1、执行以下命令，备份之前的repo文件。</h3><pre><code><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">rename &#x27;.repo&#x27; &#x27;.repo.bak&#x27; /etc/yum.repos.d/*.repo</span><br></pre></td></tr></table></figure>
+</code></pre>
+<h3 id="2、执行以下命令，下载最新的repo文件。"><a href="#2、执行以下命令，下载最新的repo文件。" class="headerlink" title="2、执行以下命令，下载最新的repo文件。"></a>2、执行以下命令，下载最新的repo文件。</h3><pre><code><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">wget https://mirrors.aliyun.com/repo/Centos-vault-8.5.2111.repo -O /etc/yum.repos.d/Centos-vault-8.5.2111.repo</span><br><span class="line">wget https://mirrors.aliyun.com/repo/epel-archive-8.repo -O /etc/yum.repos.d/epel-archive-8.repo</span><br></pre></td></tr></table></figure>
+</code></pre>
+<h3 id="3、执行以下命令，替换repo文件中的链接。"><a href="#3、执行以下命令，替换repo文件中的链接。" class="headerlink" title="3、执行以下命令，替换repo文件中的链接。"></a>3、执行以下命令，替换repo文件中的链接。</h3><pre><code><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">    sed -i &#x27;s/mirrors.cloud.aliyuncs.com/url_tmp/g&#x27;  /etc/yum.repos.d/Centos-vault-8.5.2111.repo &amp;&amp;  sed -i &#x27;s/mirrors.aliyun.com/mirrors.cloud.aliyuncs.com/g&#x27; /etc/yum.repos.d/Centos-vault-8.5.2111.repo &amp;&amp; sed -i &#x27;s/url_tmp/mirrors.aliyun.com/g&#x27; /etc/yum.repos.d/Centos-vault-8.5.2111.repo</span><br><span class="line">sed -i &#x27;s/mirrors.aliyun.com/mirrors.cloud.aliyuncs.com/g&#x27; /etc/yum.repos.d/epel-archive-8.repo</span><br></pre></td></tr></table></figure>
+</code></pre>
+<h3 id="4、执行以下命令，重新创建缓存。"><a href="#4、执行以下命令，重新创建缓存。" class="headerlink" title="4、执行以下命令，重新创建缓存。"></a>4、执行以下命令，重新创建缓存。</h3><pre><code><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">yum clean all &amp;&amp; yum makecache</span><br></pre></td></tr></table></figure>
+</code></pre>
+<h3 id="5、执行以下命令，查看repo文件。"><a href="#5、执行以下命令，查看repo文件。" class="headerlink" title="5、执行以下命令，查看repo文件。"></a>5、执行以下命令，查看repo文件。</h3><pre><code><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">yum clean all &amp;&amp; yum makecache</span><br></pre></td></tr></table></figure>
+结果如下:
+![test](https://ucc.alicdn.com/pic/developer-ecology/3bd5d3178dbd48658a1b176c6ddff5ec.png)
+</code></pre>
+<h3 id="6、执行以下命令，删除之前备份的repo文件。"><a href="#6、执行以下命令，删除之前备份的repo文件。" class="headerlink" title="6、执行以下命令，删除之前备份的repo文件。"></a>6、执行以下命令，删除之前备份的repo文件。</h3><pre><code>说明 后续步骤中我们将为切换后的CentOS8的repo文件进行重命名，以防冲突需将其删除。如果只有两个repo文件则不需要进行删除
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">rm -rf /etc/yum.repos.d/!(*.repo)</span><br></pre></td></tr></table></figure>
+</code></pre>
+<h3 id="7、删除之后，执行以下命令进行查询。"><a href="#7、删除之后，执行以下命令进行查询。" class="headerlink" title="7、删除之后，执行以下命令进行查询。"></a>7、删除之后，执行以下命令进行查询。</h3><pre><code><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">rm -rf /etc/yum.repos.d/!(*.repo)</span><br></pre></td></tr></table></figure>
+结果如下:
+![test](https://ucc.alicdn.com/pic/developer-ecology/c1ed8d5bc5ff4688aa61726941336fb3.png)
+</code></pre>
+<h2 id="第二步-准备编译环境"><a href="#第二步-准备编译环境" class="headerlink" title="第二步,准备编译环境"></a>第二步,准备编译环境</h2><p>因为在测试和安装中的服务会被防火墙拦截，因此先关闭防火墙，环境搭建完毕会重新打开防火墙</p>
+<h3 id="1、关闭防火墙。"><a href="#1、关闭防火墙。" class="headerlink" title="1、关闭防火墙。"></a>1、关闭防火墙。</h3><ul>
+<li>执行如下命令，查看当前防火墙的状态。<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">systemctl status firewalld</span><br></pre></td></tr></table></figure></li>
+</ul>
+<p>返回结果如下，您可查看到当前防火墙的状态</p>
+<p>说明 如果防火墙的状态参数是inactive，则防火墙为关闭状态。如果防火墙的状态参数是active，则防火墙为开启状态。</p>
+<p><img src="https://ucc.alicdn.com/pic/developer-ecology/5db758c46987419fb7ff4f288f334ecb.png" alt="test"></p>
+<h3 id="2-关闭防火墙。如果防火墙为关闭状态可以忽略此步骤。"><a href="#2-关闭防火墙。如果防火墙为关闭状态可以忽略此步骤。" class="headerlink" title="2. 关闭防火墙。如果防火墙为关闭状态可以忽略此步骤。"></a>2. 关闭防火墙。如果防火墙为关闭状态可以忽略此步骤。</h3><ul>
+<li>a.如下命令，关闭防火墙。<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">systemctl stop firewalld</span><br></pre></td></tr></table></figure></li>
+<li>b.执行如下命令，实例开机时，禁止启动防火墙服务。<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">systemctl disable firewalld</span><br></pre></td></tr></table></figure></li>
+</ul>
+<h2 id="第三步-安装Nginx"><a href="#第三步-安装Nginx" class="headerlink" title="第三步, 安装Nginx"></a>第三步, 安装Nginx</h2><h3 id="1、执行如下命令，安装Nginx。"><a href="#1、执行如下命令，安装Nginx。" class="headerlink" title="1、执行如下命令，安装Nginx。"></a>1、执行如下命令，安装Nginx。</h3><p>- </p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">dnf -y install http://nginx.org/packages/centos/8/x86_64/RPMS/nginx-1.16.1-1.el8.ngx.x86_64.rpm</span><br></pre></td></tr></table></figure>
+<p><img src="https://ucc.alicdn.com/pic/developer-ecology/dfe28bf6262240548116a1a2c0176026.png" alt="test"></p>
+<h3 id="2、执行如下命令，查看Nginx版本。"><a href="#2、执行如下命令，查看Nginx版本。" class="headerlink" title="2、执行如下命令，查看Nginx版本。"></a>2、执行如下命令，查看Nginx版本。</h3><p>- </p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">nginx -v</span><br></pre></td></tr></table></figure>
+<p>返回结果如下，表示Nginx安装成功。<br><img src="https://ucc.alicdn.com/pic/developer-ecology/6610a864a5184aebaa4082f11867a29f.png" alt="test"></p>
+<h2 id="第四步-安装MySQL"><a href="#第四步-安装MySQL" class="headerlink" title="第四步,安装MySQL"></a>第四步,安装MySQL</h2><h3 id="1、执行如下命令，安装MySQL。"><a href="#1、执行如下命令，安装MySQL。" class="headerlink" title="1、执行如下命令，安装MySQL。"></a>1、执行如下命令，安装MySQL。</h3><p>- </p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">dnf -y install @mysql</span><br></pre></td></tr></table></figure>
+
+
+<h3 id="2、执行如下命令，查看MySQL版本。"><a href="#2、执行如下命令，查看MySQL版本。" class="headerlink" title="2、执行如下命令，查看MySQL版本。"></a>2、执行如下命令，查看MySQL版本。</h3><p>- </p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">mysql -V</span><br></pre></td></tr></table></figure>
+<p>返回结果如图所示，表示MySQL安装成功。<br><img src="https://ucc.alicdn.com/pic/developer-ecology/ef7d85c57e474cf8bdfbfd64885bac57.png" alt="test"></p>
+<h2 id="第五步-安装PHP"><a href="#第五步-安装PHP" class="headerlink" title="第五步,安装PHP"></a>第五步,安装PHP</h2><h3 id="1、执行如下命令，添加并更新epel源。"><a href="#1、执行如下命令，添加并更新epel源。" class="headerlink" title="1、执行如下命令，添加并更新epel源。"></a>1、执行如下命令，添加并更新epel源。</h3><p>- </p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">dnf -y install epel-release</span><br><span class="line">dnf -y update epel-release</span><br></pre></td></tr></table></figure>
+
+
+<h3 id="2、执行以下命令，删除缓存的无用软件包并更新软件源。"><a href="#2、执行以下命令，删除缓存的无用软件包并更新软件源。" class="headerlink" title="2、执行以下命令，删除缓存的无用软件包并更新软件源。"></a>2、执行以下命令，删除缓存的无用软件包并更新软件源。</h3><p>- </p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">dnf clean all</span><br><span class="line">dnf makecache</span><br></pre></td></tr></table></figure>
+
+<h3 id="3、执行以下命令，启用php-7-3模块。"><a href="#3、执行以下命令，启用php-7-3模块。" class="headerlink" title="3、执行以下命令，启用php:7.3模块。"></a>3、执行以下命令，启用<strong>php:7.3</strong>模块。</h3><ul>
+<li>说明 本示例使用php:7.3版本。如果您需要使用PHP 7.4版本，需要先安装remi源。remi源安装命令为dnf -y install<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">dnf -y module enable php:7.3</span><br></pre></td></tr></table></figure></li>
+</ul>
+<h3 id="4、执行以下命令，安装PHP相应的模块。"><a href="#4、执行以下命令，安装PHP相应的模块。" class="headerlink" title="4、执行以下命令，安装PHP相应的模块。"></a>4、执行以下命令，安装PHP相应的模块。</h3><p>- </p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">dnf -y install php php-curl php-dom php-exif php-fileinfo php-fpm php-gd php-hash php-json php-mbstring php-mysqli php-openssl php-pcre php-xml libsodium</span><br></pre></td></tr></table></figure>
+<p>返回结果如下，表示安装成功。<br><img src="https://ucc.alicdn.com/pic/developer-ecology/dfb264f7d0bf42c98525122ca9e5aca1.png" alt="test"></p>
+<h2 id="第六步-配置Nginx"><a href="#第六步-配置Nginx" class="headerlink" title="第六步,配置Nginx"></a>第六步,配置Nginx</h2><p>先尝试开启nginx服务</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">systemctl start nginx</span><br></pre></td></tr></table></figure>
+<p>如果没有报错你可以继续做如果报了以下的错误重新安装就行<br><img src="https://s1.ax1x.com/2023/05/20/p94TqbD.md.jpg" alt="p94TqbD.md.jpg"><br>卸载命令</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">dnf remove nginx</span><br></pre></td></tr></table></figure>
+<p>安装命令</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">dnf -y install http://nginx.org/packages/centos/8/x86_64/RPMS/nginx-1.16.1-1.el8.ngx.x86_64.rpm</span><br></pre></td></tr></table></figure>
+
+<h3 id="现在你的nginx能够正常开启，接下来需要对nginx的配置做修改"><a href="#现在你的nginx能够正常开启，接下来需要对nginx的配置做修改" class="headerlink" title="现在你的nginx能够正常开启，接下来需要对nginx的配置做修改"></a>现在你的nginx能够正常开启，接下来需要对nginx的配置做修改</h3><h3 id="1、执行如下命令，查看Nginx配置文件的默认路径。"><a href="#1、执行如下命令，查看Nginx配置文件的默认路径。" class="headerlink" title="1、执行如下命令，查看Nginx配置文件的默认路径。"></a>1、执行如下命令，查看Nginx配置文件的默认路径。</h3><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">cat /etc/nginx/nginx.conf</span><br></pre></td></tr></table></figure>
+<p>在<strong>http</strong>大括号内，查看<strong>include</strong>配置项。即配置文件的默认路径。<br><img src="https://ucc.alicdn.com/pic/developer-ecology/4321541e3c0e41f59200cfad92013f38.png" alt="test"></p>
+<h3 id="2、执行如下命令，在配置文件的默认路径下，备份默认配置文件。"><a href="#2、执行如下命令，在配置文件的默认路径下，备份默认配置文件。" class="headerlink" title="2、执行如下命令，在配置文件的默认路径下，备份默认配置文件。"></a>2、执行如下命令，在配置文件的默认路径下，备份默认配置文件。</h3><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">cd /etc/nginx/conf.d</span><br><span class="line">cp default.conf default.conf.bak</span><br></pre></td></tr></table></figure>
+<h3 id="3、修改默认配置文件。"><a href="#3、修改默认配置文件。" class="headerlink" title="3、修改默认配置文件。"></a>3、修改默认配置文件。</h3><ul>
+<li><p>a.执行如下命令，打开默认配置文件。</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">vi default.conf</span><br></pre></td></tr></table></figure></li>
+<li><p>b.按<strong>i</strong>进入编辑模式。</p>
+</li>
+<li><p>c.在<strong>location</strong>大括号内，修改以下内容。</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line">location / &#123;</span><br><span class="line">    #将该路径替换为您的网站根目录。</span><br><span class="line">    root   /usr/share/nginx/html;</span><br><span class="line">    #添加默认首页信息index.php。</span><br><span class="line">    index  index.html index.htm index.php;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<p>修改后如图:<br><img src="https://ucc.alicdn.com/pic/developer-ecology/d0b31cb77cd247c194a4c9b7f585b70c.png" alt="test"></p>
+</li>
+<li><p>d.去掉被注释的  location ~ .php$  大括号内容前的  # ，并修改大括号的内容。</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br></pre></td><td class="code"><pre><span class="line">location ~ \.php$ &#123;</span><br><span class="line">    #将该路径替换为您的网站根目录。</span><br><span class="line">    root           /usr/share/nginx/html;</span><br><span class="line">    #Nginx通过unix套接字与PHP-FPM建立联系，该配置与/etc/php-fpm.d/www.conf文件内的listen配置一致。</span><br><span class="line">    fastcgi_pass   unix:/run/php-fpm/www.sock;</span><br><span class="line">    fastcgi_index  index.php;</span><br><span class="line">    #将/scripts$fastcgi_script_name修改为$document_root$fastcgi_script_name。</span><br><span class="line">    fastcgi_param  SCRIPT_FILENAME  $document_root$fastcgi_script_name;</span><br><span class="line">    #Nginx调用fastcgi接口处理PHP请求。</span><br><span class="line">    include        fastcgi_params;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<p>修改完成如下所示。<br><img src="https://ucc.alicdn.com/pic/developer-ecology/7dca79e77df54409a655e95253d21834.png" alt="test"></p>
+</li>
+<li><p>e.按下Esc键后，输入:wq并回车以保存关闭配置文件。</p>
+</li>
+<li><p>f.执行以下命令，启动Nginx服务。</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">systemctl start nginx </span><br></pre></td></tr></table></figure></li>
+</ul>
+<h3 id="5、执行一下命令，设置Nginx服务开机自启动。"><a href="#5、执行一下命令，设置Nginx服务开机自启动。" class="headerlink" title="5、执行一下命令，设置Nginx服务开机自启动。"></a>5、执行一下命令，设置Nginx服务开机自启动。</h3><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">systemctl enable nginx</span><br></pre></td></tr></table></figure>
+
+<h2 id="第七步-配置MySQL"><a href="#第七步-配置MySQL" class="headerlink" title="第七步,配置MySQL"></a>第七步,配置MySQL</h2><h3 id="1-执行如下命令，启动MySQL，并设置为开机自启动。"><a href="#1-执行如下命令，启动MySQL，并设置为开机自启动。" class="headerlink" title="1.执行如下命令，启动MySQL，并设置为开机自启动。"></a>1.执行如下命令，启动MySQL，并设置为开机自启动。</h3><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">systemctl enable --now mysqld</span><br></pre></td></tr></table></figure>
+
+<h3 id="2-执行如下命令，查看MySQL是否已启动。"><a href="#2-执行如下命令，查看MySQL是否已启动。" class="headerlink" title="2.执行如下命令，查看MySQL是否已启动。"></a>2.执行如下命令，查看MySQL是否已启动。</h3><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">systemctl status mysqld</span><br></pre></td></tr></table></figure>
+<p>查看返回结果中Active: active (running)表示已启动。<br><img src="https://ucc.alicdn.com/pic/developer-ecology/965b2b2998344f75af5dcbb6dd9a6014.png"></p>
+<h3 id="3-执行下命令，执行MySQL安全性操作并设置密码。"><a href="#3-执行下命令，执行MySQL安全性操作并设置密码。" class="headerlink" title="3.执行下命令，执行MySQL安全性操作并设置密码。"></a>3.执行下命令，执行MySQL安全性操作并设置密码。</h3><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">mysql_secure_installation</span><br></pre></td></tr></table></figure>
+<p><img src="/"></p>
+<h4 id="1-输入Y并回车开始相关配置。"><a href="#1-输入Y并回车开始相关配置。" class="headerlink" title="1.输入Y并回车开始相关配置。"></a>1.输入Y并回车开始相关配置。</h4><p><img src="https://ucc.alicdn.com/pic/developer-ecology/20cfc290f24f43eb859babf5e7fa824d.png"></p>
+<h4 id="2-选择密码验证策略强度，输入2并回车。"><a href="#2-选择密码验证策略强度，输入2并回车。" class="headerlink" title="2.选择密码验证策略强度，输入2并回车。"></a>2.选择密码验证策略强度，输入2并回车。</h4><p><img src="https://ucc.alicdn.com/pic/developer-ecology/8e1487bce44646dfa9fb1f9568bcb45d.png"></p>
+<h4 id="3-设置MySQL的新密码并确认。本示例设置密码PASSword123！。"><a href="#3-设置MySQL的新密码并确认。本示例设置密码PASSword123！。" class="headerlink" title="3.设置MySQL的新密码并确认。本示例设置密码PASSword123！。"></a>3.设置MySQL的新密码并确认。本示例设置密码PASSword123！。</h4><p><img src="https://ucc.alicdn.com/pic/developer-ecology/5e07f4b5091e44b89203f7807d9951af.png"></p>
+<h4 id="4-输入Y并回车继续使用提供的密码。"><a href="#4-输入Y并回车继续使用提供的密码。" class="headerlink" title="4.输入Y并回车继续使用提供的密码。"></a>4.输入Y并回车继续使用提供的密码。</h4><p><img src="https://ucc.alicdn.com/pic/developer-ecology/38fc7568ec4b44d28daef3b22a4d4df8.png"></p>
+<h4 id="5-输入Y并回车移除匿名用户。"><a href="#5-输入Y并回车移除匿名用户。" class="headerlink" title="5.输入Y并回车移除匿名用户。"></a>5.输入Y并回车移除匿名用户。</h4><p><img src="https://ucc.alicdn.com/pic/developer-ecology/733d5b3d29d54b448f4295daf7f44d06.png"></p>
+<h4 id="6-输入Y并回车移除匿名用户。"><a href="#6-输入Y并回车移除匿名用户。" class="headerlink" title="6.输入Y并回车移除匿名用户。"></a>6.输入Y并回车移除匿名用户。</h4><p><img src="https://ucc.alicdn.com/pic/developer-ecology/10057d892a3d41c0b0defa1e46f12633.png"></p>
+<h4 id="7-入Y并回车删除test库以及对test库的访问权限。"><a href="#7-入Y并回车删除test库以及对test库的访问权限。" class="headerlink" title="7.入Y并回车删除test库以及对test库的访问权限。"></a>7.入Y并回车删除test库以及对test库的访问权限。</h4><p><img src="https://ucc.alicdn.com/pic/developer-ecology/b58f88967a334635be04fed8d94a6660.png"></p>
+<h4 id="8-输入Y并回车重新加载授权表。"><a href="#8-输入Y并回车重新加载授权表。" class="headerlink" title="8.输入Y并回车重新加载授权表。"></a>8.输入Y并回车重新加载授权表。</h4><p><img src="https://ucc.alicdn.com/pic/developer-ecology/e7c2f66679494a8b989bc0010a0ca1b5.png"></p>
+<h2 id="第八步-配置PHP"><a href="#第八步-配置PHP" class="headerlink" title="第八步,配置PHP"></a>第八步,配置PHP</h2><h3 id="1-修改PHP配置文件。"><a href="#1-修改PHP配置文件。" class="headerlink" title="1.修改PHP配置文件。"></a>1.修改PHP配置文件。</h3><ul>
+<li>a.执行如下命令，打开配置文件。<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">vi /etc/php-fpm.d/www.conf</span><br></pre></td></tr></table></figure></li>
+<li>b.vi &#x2F;etc&#x2F;php-fpm.d&#x2F;<a target="_blank" rel="noopener" href="http://www.conf/">www.conf</a></li>
+<li>c.找到user &#x3D; apache和group &#x3D; apache，将apache修改为nginx。<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">/user   #vim搜索命令</span><br></pre></td></tr></table></figure>
+<img src="https://ucc.alicdn.com/pic/developer-ecology/25c88af578264eb1bc68c3b37e6d0ac3.png"></li>
+<li>d.按Esc键后，输入:wq并回车，保存关闭配置文件。</li>
+<li>e.新建并编辑phpinfo.php文件，用于展示PHP信息。</li>
+<li>f.执行以下命令，新建phpinfo.php文件。<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">vim &lt;网站根目录&gt;/phpinfo.php</span><br></pre></td></tr></table></figure>
+&lt;网站根目录&gt;是您在nginx.conf配置文件中location ~ .php$大括号内，配置的root参数值，如下图所示。<br><img src="https://ucc.alicdn.com/pic/developer-ecology/4d1cc3731966423790ccc52389fe79b5.png"><br>本文配置的网站根目录为&#x2F;usr&#x2F;share&#x2F;nginx&#x2F;html，因此需要运行以下命令新建phpinfo.php文件。<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">vim /usr/share/nginx/html/phpinfo.php</span><br></pre></td></tr></table></figure></li>
+<li>b.按i进入编辑模式。</li>
+<li>c.输入下列内容，函数phpinfo()​会展示PHP的所有配置信息。<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">&lt;?php echo phpinfo(); ?&gt;</span><br></pre></td></tr></table></figure></li>
+<li>d.按Esc键后，输入:wq并回车，保存关闭配置文件。</li>
+<li>e.执行以下命令，启动PHP-FPM<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">systemctl start php-fpm</span><br></pre></td></tr></table></figure></li>
+</ul>
+<h3 id="2、执行以下命令，设置PHP-FPM开机自启动。"><a href="#2、执行以下命令，设置PHP-FPM开机自启动。" class="headerlink" title="2、执行以下命令，设置PHP-FPM开机自启动。"></a>2、执行以下命令，设置PHP-FPM开机自启动。</h3><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">systemctl enable php-fpm</span><br></pre></td></tr></table></figure>
+
+<h2 id="第九步-测试"><a href="#第九步-测试" class="headerlink" title="第九步,测试"></a>第九步,测试</h2><h3 id="1、在您的本机浏览器中，打开新页签，在地址栏输入http-x2F-x2F-lt-ECS实例公网IP地址-gt-x2F-phpinfo-php。"><a href="#1、在您的本机浏览器中，打开新页签，在地址栏输入http-x2F-x2F-lt-ECS实例公网IP地址-gt-x2F-phpinfo-php。" class="headerlink" title="1、在您的本机浏览器中，打开新页签，在地址栏输入http:&#x2F;&#x2F;&lt;ECS实例公网IP地址&gt;&#x2F;phpinfo.php。"></a>1、在您的本机浏览器中，打开新页签，在地址栏输入http:&#x2F;&#x2F;&lt;ECS实例公网IP地址&gt;&#x2F;phpinfo.php。</h3><p>说明 您需要将&lt;ECS实例公网IP地址&gt;替换为云产品资源列表中的ECS公网地址。</p>
+<p>返回结果如下图所示，表示LNMP环境部署成功。<br><img src="https://ucc.alicdn.com/pic/developer-ecology/04c3595c546a40c6991606453d21aa70.png"></p>
+<h2 id="第十步-收尾"><a href="#第十步-收尾" class="headerlink" title="第十步,收尾"></a>第十步,收尾</h2><blockquote>
+<p>还记得我们在开始的时候把防火墙关掉了吗？,我们现在来开启防火墙</p>
 </blockquote>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">systemctl start firewalld</span><br></pre></td></tr></table></figure>
 <ul>
-<li>本程序使用python写的,使用的第三方库为requests,如果您未安装你可以在命令行中执行以下命令<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">pip install requests</span><br></pre></td></tr></table></figure></li>
+<li>但是开启防火墙，可以看到，我们之前搭建好的网页现在无法响应就像这样<br><img src="https://s1.ax1x.com/2023/05/20/p94HDXV.md.jpg"></li>
 </ul>
 <blockquote>
-<p>下面的就是本程序的源代码了,注意前几个变量需要你填写，之后就可以愉快的白嫖校园网了，定时可以采用python的time(不推荐),比较推荐的是cmd的定时,因为cmd的定时可以开机自启,当然用python的time也能达到相同的效果,不能执行解绑mac的操作</p>
+<p>现在我们为nginx,mysql等服务，允许他们经过防火墙，我们需要放行80-http，443-https，3306-mysql端口</p>
 </blockquote>
-    
-    <a class="article-more-a" href="/2023/03/20/%E7%99%BD%E5%AB%96%E6%A0%A1%E5%9B%AD%E7%BD%91/#more">more >></a>
-    
-    
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">firewall-cmd --zone=public --add-port=80/tcp --permanent</span><br><span class="line">firewall-cmd --zone=public --add-port=443/tcp --permanent</span><br><span class="line">firewall-cmd --zone=public --add-port=3306/tcp --permanent</span><br></pre></td></tr></table></figure>
 
-    
-
-    
-
-  </div>
-  <div class="article-info article-info-index">
-    
-    
-	<div class="article-tag tagcloud">
-		<i class="icon-price-tags icon"></i>
-		<ul class="article-tag-list">
-			 
-        		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color2">python</a>
-        		</li>
-      		 
-        		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color3">随笔</a>
-        		</li>
-      		 
-        		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color4">requests</a>
-        		</li>
-      		
-		</ul>
-	</div>
-
-    
-
-    
-    <p class="article-more-link">
-      <a class="article-more-a" href="/2023/03/20/%E7%99%BD%E5%AB%96%E6%A0%A1%E5%9B%AD%E7%BD%91/">展开全文 >></a>
-    </p>
-    
-
-    
-    <div class="clearfix"></div>
-  </div>
-  </div>
-</article>
-
-<aside class="wrap-side-operation">
-    <div class="mod-side-operation">
-        
-        <div class="jump-container" id="js-jump-container" style="display:none;">
-            <a href="javascript:void(0)" class="mod-side-operation__jump-to-top">
-                <i class="icon-font icon-back"></i>
-            </a>
-            <div id="js-jump-plan-container" class="jump-plan-container" style="top: -11px;">
-                <i class="icon-font icon-plane jump-plane"></i>
-            </div>
-        </div>
-        
-        
-    </div>
-</aside>
-
-
-
-
-
-  
-
-  
-    <article id="post-IDM无法集成浏览器" class="article article-type-post  article-index" itemscope itemprop="blogPost">
-  <div class="article-inner">
-    
-      <header class="article-header">
-  
-  
-    <h1 itemprop="name">
-	
-	  <a class="article-title" href="/2023/03/11/IDM%E6%97%A0%E6%B3%95%E9%9B%86%E6%88%90%E6%B5%8F%E8%A7%88%E5%99%A8/" target="_blank">IDM无法集成浏览器</a>
-  
-    </h1>
-  
-
-
-  
-  
-<a href="/2023/03/11/IDM%E6%97%A0%E6%B3%95%E9%9B%86%E6%88%90%E6%B5%8F%E8%A7%88%E5%99%A8/" class="archive-article-date">
-        <time datetime="2023-03-11T14:38:56.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2023-03-11</time>
-</a>
-
-  
-  
-    
-
-  
-  </header>
-  
-  <div class="article-entry" itemprop="articleBody">
-    
-    <h1 id="IDM无法集成浏览器"><a href="#IDM无法集成浏览器" class="headerlink" title="IDM无法集成浏览器"></a>IDM无法集成浏览器</h1><blockquote>
-<p>背景:因为一时手误，使用了联想管家拦截了idm集成浏览器的行为，因此以下内容将对此种方法造成的错误进行修复</p>
+<blockquote>
+<p>现在我们操作完毕的，但是返回到浏览器还是无法访问，此时我们需要重启一下防火墙即可</p>
 </blockquote>
-    
-    <a class="article-more-a" href="/2023/03/11/IDM%E6%97%A0%E6%B3%95%E9%9B%86%E6%88%90%E6%B5%8F%E8%A7%88%E5%99%A8/#more">more >></a>
-    
-    
-
-    
-
-    
-
-  </div>
-  <div class="article-info article-info-index">
-    
-    
-	<div class="article-tag tagcloud">
-		<i class="icon-price-tags icon"></i>
-		<ul class="article-tag-list">
-			 
-        		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color3">随笔</a>
-        		</li>
-      		
-		</ul>
-	</div>
-
-    
-
-    
-    <p class="article-more-link">
-      <a class="article-more-a" href="/2023/03/11/IDM%E6%97%A0%E6%B3%95%E9%9B%86%E6%88%90%E6%B5%8F%E8%A7%88%E5%99%A8/">展开全文 >></a>
-    </p>
-    
-
-    
-    <div class="clearfix"></div>
-  </div>
-  </div>
-</article>
-
-<aside class="wrap-side-operation">
-    <div class="mod-side-operation">
-        
-        <div class="jump-container" id="js-jump-container" style="display:none;">
-            <a href="javascript:void(0)" class="mod-side-operation__jump-to-top">
-                <i class="icon-font icon-back"></i>
-            </a>
-            <div id="js-jump-plan-container" class="jump-plan-container" style="top: -11px;">
-                <i class="icon-font icon-plane jump-plane"></i>
-            </div>
-        </div>
-        
-        
-    </div>
-</aside>
-
-
-
-
-
-  
-
-  
-    <article id="post-在虚拟机中安装openwrt遇到的问题" class="article article-type-post  article-index" itemscope itemprop="blogPost">
-  <div class="article-inner">
-    
-      <header class="article-header">
-  
-  
-    <h1 itemprop="name">
-	
-	  <a class="article-title" href="/2023/03/11/%E5%9C%A8%E8%99%9A%E6%8B%9F%E6%9C%BA%E4%B8%AD%E5%AE%89%E8%A3%85openwrt%E9%81%87%E5%88%B0%E7%9A%84%E9%97%AE%E9%A2%98/" target="_blank">在虚拟机中安装openwrt遇到的问题</a>
-  
-    </h1>
-  
-
-
-  
-  
-<a href="/2023/03/11/%E5%9C%A8%E8%99%9A%E6%8B%9F%E6%9C%BA%E4%B8%AD%E5%AE%89%E8%A3%85openwrt%E9%81%87%E5%88%B0%E7%9A%84%E9%97%AE%E9%A2%98/" class="archive-article-date">
-        <time datetime="2023-03-11T14:38:08.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2023-03-11</time>
-</a>
-
-  
-  
-    
-
-  
-  </header>
-  
-  <div class="article-entry" itemprop="articleBody">
-    
-    <h1 id="在虚拟机中安装openwrt"><a href="#在虚拟机中安装openwrt" class="headerlink" title="在虚拟机中安装openwrt"></a>在虚拟机中安装openwrt</h1><ul>
-<li>1.openwrt  img镜像</li>
-</ul>
-    
-    <a class="article-more-a" href="/2023/03/11/%E5%9C%A8%E8%99%9A%E6%8B%9F%E6%9C%BA%E4%B8%AD%E5%AE%89%E8%A3%85openwrt%E9%81%87%E5%88%B0%E7%9A%84%E9%97%AE%E9%A2%98/#more">more >></a>
-    
-    
-
-    
-
-    
-
-  </div>
-  <div class="article-info article-info-index">
-    
-    
-	<div class="article-tag tagcloud">
-		<i class="icon-price-tags icon"></i>
-		<ul class="article-tag-list">
-			 
-        		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color3">随笔</a>
-        		</li>
-      		 
-        		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color1">Linux</a>
-        		</li>
-      		 
-        		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color4">虚拟机</a>
-        		</li>
-      		 
-        		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color3">openwrt</a>
-        		</li>
-      		
-		</ul>
-	</div>
-
-    
-
-    
-    <p class="article-more-link">
-      <a class="article-more-a" href="/2023/03/11/%E5%9C%A8%E8%99%9A%E6%8B%9F%E6%9C%BA%E4%B8%AD%E5%AE%89%E8%A3%85openwrt%E9%81%87%E5%88%B0%E7%9A%84%E9%97%AE%E9%A2%98/">展开全文 >></a>
-    </p>
-    
-
-    
-    <div class="clearfix"></div>
-  </div>
-  </div>
-</article>
-
-<aside class="wrap-side-operation">
-    <div class="mod-side-operation">
-        
-        <div class="jump-container" id="js-jump-container" style="display:none;">
-            <a href="javascript:void(0)" class="mod-side-operation__jump-to-top">
-                <i class="icon-font icon-back"></i>
-            </a>
-            <div id="js-jump-plan-container" class="jump-plan-container" style="top: -11px;">
-                <i class="icon-font icon-plane jump-plane"></i>
-            </div>
-        </div>
-        
-        
-    </div>
-</aside>
-
-
-
-
-
-  
-
-  
-    <article id="post-在RHEL系统中使用源码安装python" class="article article-type-post  article-index" itemscope itemprop="blogPost">
-  <div class="article-inner">
-    
-      <header class="article-header">
-  
-  
-    <h1 itemprop="name">
-	
-	  <a class="article-title" href="/2023/03/11/%E5%9C%A8RHEL%E7%B3%BB%E7%BB%9F%E4%B8%AD%E4%BD%BF%E7%94%A8%E6%BA%90%E7%A0%81%E5%AE%89%E8%A3%85python/" target="_blank">在RHEL系统中使用源码安装python</a>
-  
-    </h1>
-  
-
-
-  
-  
-<a href="/2023/03/11/%E5%9C%A8RHEL%E7%B3%BB%E7%BB%9F%E4%B8%AD%E4%BD%BF%E7%94%A8%E6%BA%90%E7%A0%81%E5%AE%89%E8%A3%85python/" class="archive-article-date">
-        <time datetime="2023-03-11T13:59:46.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2023-03-11</time>
-</a>
-
-  
-  
-    
-
-  
-  </header>
-  
-  <div class="article-entry" itemprop="articleBody">
-    
-    <h1 id="关于在新RHEL系统中使用源码安装python"><a href="#关于在新RHEL系统中使用源码安装python" class="headerlink" title="关于在新RHEL系统中使用源码安装python"></a>关于在新RHEL系统中使用源码安装python</h1><blockquote>
-<p>注:如果你的系统来自服务器厂商魔改的则不需要安装依赖,直接从第二步开始</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">systemctl restart firewalld</span><br></pre></td></tr></table></figure>
+<blockquote>
+<p>现在就能正常访问我们的网页了</p>
 </blockquote>
-<h2 id="1-安装依赖"><a href="#1-安装依赖" class="headerlink" title="1.安装依赖"></a>1.安装依赖</h2>
-    
-    <a class="article-more-a" href="/2023/03/11/%E5%9C%A8RHEL%E7%B3%BB%E7%BB%9F%E4%B8%AD%E4%BD%BF%E7%94%A8%E6%BA%90%E7%A0%81%E5%AE%89%E8%A3%85python/#more">more >></a>
-    
-    
+<p><img src="https://s1.ax1x.com/2023/05/20/p94H46x.md.jpg"></p>
+<h2 id="第十一步-使用python连接数据库测试mysql是否可用"><a href="#第十一步-使用python连接数据库测试mysql是否可用" class="headerlink" title="第十一步,使用python连接数据库测试mysql是否可用"></a>第十一步,使用python连接数据库测试mysql是否可用</h2><blockquote>
+<p>为了能让python正常获取数据库中的数据我们先使用命令连上数据库创建一个数据库</p>
+</blockquote>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">mysql -uroot -p</span><br></pre></td></tr></table></figure>
 
-    
-
-    
-
-  </div>
-  <div class="article-info article-info-index">
-    
-    
-	<div class="article-tag tagcloud">
-		<i class="icon-price-tags icon"></i>
-		<ul class="article-tag-list">
-			 
-        		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color2">python</a>
-        		</li>
-      		 
-        		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color3">随笔</a>
-        		</li>
-      		 
-        		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color1">Linux</a>
-        		</li>
-      		 
-        		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color5">RHEL</a>
-        		</li>
-      		 
-        		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color3">安装</a>
-        		</li>
-      		
-		</ul>
-	</div>
-
-    
-
-    
-    <p class="article-more-link">
-      <a class="article-more-a" href="/2023/03/11/%E5%9C%A8RHEL%E7%B3%BB%E7%BB%9F%E4%B8%AD%E4%BD%BF%E7%94%A8%E6%BA%90%E7%A0%81%E5%AE%89%E8%A3%85python/">展开全文 >></a>
-    </p>
-    
-
-    
-    <div class="clearfix"></div>
-  </div>
-  </div>
-</article>
-
-<aside class="wrap-side-operation">
-    <div class="mod-side-operation">
-        
-        <div class="jump-container" id="js-jump-container" style="display:none;">
-            <a href="javascript:void(0)" class="mod-side-operation__jump-to-top">
-                <i class="icon-font icon-back"></i>
-            </a>
-            <div id="js-jump-plan-container" class="jump-plan-container" style="top: -11px;">
-                <i class="icon-font icon-plane jump-plane"></i>
-            </div>
-        </div>
-        
-        
-    </div>
-</aside>
-
-
-
-
-
-  
-
-  
-    <article id="post-mysql安装时的坑" class="article article-type-post  article-index" itemscope itemprop="blogPost">
-  <div class="article-inner">
-    
-      <header class="article-header">
-  
-  
-    <h1 itemprop="name">
-	
-	  <a class="article-title" href="/2023/02/20/mysql%E5%AE%89%E8%A3%85%E6%97%B6%E7%9A%84%E5%9D%91/" target="_blank">mysql安装时的坑</a>
-  
-    </h1>
-  
-
-
-  
-  
-<a href="/2023/02/20/mysql%E5%AE%89%E8%A3%85%E6%97%B6%E7%9A%84%E5%9D%91/" class="archive-article-date">
-        <time datetime="2023-02-20T14:12:48.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2023-02-20</time>
-</a>
-
-  
-  
-    
-
-  
-  </header>
-  
-  <div class="article-entry" itemprop="articleBody">
-    
-    <h1 id="MySQL安装时踩的坑"><a href="#MySQL安装时踩的坑" class="headerlink" title="MySQL安装时踩的坑"></a>MySQL安装时踩的坑</h1><p><em>注意不要有中文路径</em><br><em>使用管理员权限命令行打开MySQL的解压目录</em></p>
+<blockquote>
+<p>密码还记得吗，我们在之前也配置过,密码是PASSword123!</p>
+</blockquote>
 <ul>
-<li><p>使用以下命令进行数据库初始化</p>
-<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">mysqld --initialize --console</span><br></pre></td></tr></table></figure>
-    
-    <a class="article-more-a" href="/2023/02/20/mysql%E5%AE%89%E8%A3%85%E6%97%B6%E7%9A%84%E5%9D%91/#more">more >></a>
-    
-    
+<li><p>现在我们创建一个learn的数据库，并用use进入数据库</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">mysql&gt;create database learn;</span><br><span class="line">mysql&gt;use learn;</span><br></pre></td></tr></table></figure>
+</li>
+<li><p>现在我们再建一张名为goods的表,让它存储不同类型的商品，建表语句</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br></pre></td><td class="code"><pre><span class="line">CREATE TABLE `goods` (</span><br><span class="line">  `id` int NOT NULL AUTO_INCREMENT,</span><br><span class="line">  `type` varchar(30) NOT NULL,</span><br><span class="line">  `name` varchar(30) DEFAULT NULL,</span><br><span class="line">  `price` decimal(7,2) unsigned DEFAULT NULL,</span><br><span class="line">  `num` int DEFAULT &#x27;0&#x27;,</span><br><span class="line">  `add_time` datetime DEFAULT NULL,</span><br><span class="line">  PRIMARY KEY (`id`),</span><br><span class="line">  UNIQUE KEY `name` (`name`)</span><br><span class="line">) ENGINE=InnoDB AUTO_INCREMENT=17 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;</span><br></pre></td></tr></table></figure>
+</li>
+<li><p>使用desc查看表结构</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">desc goods;</span><br></pre></td></tr></table></figure>
+</li>
+<li><p>insert into 插入一条数据</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">insert into goods values(1,&#x27;书籍&#x27;,&#x27;心灵鸡汤&#x27;,59.98,100,now());</span><br></pre></td></tr></table></figure></li>
+<li><p>select查询一下表的内容</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">select * from goods;</span><br></pre></td></tr></table></figure>
+</li>
+<li><p>\q退出</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">\q</span><br></pre></td></tr></table></figure>
+<p>效果如下:<br><img src="https://s1.ax1x.com/2023/05/20/p94bVcq.md.png"></p>
+</li>
+</ul>
+<blockquote>
+<p>接下来使用python3.9来连接</p>
+</blockquote>
+<ul>
+<li><p>安装python3.9</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">dnf install python3.9 -y</span><br></pre></td></tr></table></figure>
+</li>
+<li><p>安装pymysql，用来连接数据库</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">pip3.9 install pymysql</span><br></pre></td></tr></table></figure></li>
+<li><p>控制台数据python3.9进入python命令行</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br></pre></td><td class="code"><pre><span class="line">[root@iZuf6bdol74ybrk0rc88xnZ ~]# python3.9</span><br><span class="line">Python 3.9.6 (default, Aug 25 2021, 16:22:38) </span><br><span class="line">[GCC 8.5.0 20210514 (Red Hat 8.5.0-3)] on linux</span><br><span class="line">Type &quot;help&quot;, &quot;copyright&quot;, &quot;credits&quot; or &quot;license&quot; for more information.</span><br><span class="line">&gt;&gt;&gt; import pymysql</span><br><span class="line">&gt;&gt;&gt; db=pymysql.connect(host=&quot;localhost&quot;,port=3306,user=&#x27;root&#x27;,password=&quot;PASSword123!&quot;,database=&#x27;learn&#x27;) #创建连接</span><br><span class="line">&gt;&gt;&gt; cursor=db.cursor()                  #指针</span><br><span class="line">&gt;&gt;&gt; sql=&#x27;select * from goods;&#x27;          #sql语句，查询语句</span><br><span class="line">&gt;&gt;&gt; cursor.execute(sql)                 #1为成功执行了一条sql语句</span><br><span class="line">1</span><br><span class="line">&gt;&gt;&gt; print(cursor.fetchall())            #打印查询结果</span><br><span class="line">((1, &#x27;书籍&#x27;, &#x27;心灵鸡汤&#x27;, Decimal(&#x27;59.98&#x27;), 100, datetime.datetime(2023, 5, 20, 11, 7, 39)),)</span><br><span class="line">&gt;&gt;&gt; exit()                              #退出python</span><br></pre></td></tr></table></figure>
+<p>效果如下:<br><img src="https://s1.ax1x.com/2023/05/20/p94bo2n.md.png" alt="p94bo2n.md.png"></p>
+</li>
+</ul>
+<blockquote>
+<p>教程到此就结束了，相信你已经具备自己部署LNMP环境的能力了，恭喜你!</p>
+</blockquote>
 
     
 
+    
+
+    
+    <div class="declare"> 
+      <ul class="post-copyright">
+        <li>
+          <strong>本文作者：</strong>
+          Li Zhan Qi
+        </li>
+        <li>
+          <strong>本文链接：</strong>
+          <a href="https://lzq-hopego.github.io/2023/05/20/在Centos8-RHEL8中部署LNMP环境/" title="在Centos8/RHEL8中部署LNMP环境" target="_blank">https://lzq-hopego.github.io/2023/05/20/在Centos8-RHEL8中部署LNMP环境/</a>
+        </li>
+        
+        <li>
+          <strong>版权声明： </strong>
+          
+          本博客所有文章除特别声明外，均采用 <a href="https://github.com/JoeyBling/hexo-theme-yilia-plus/blob/master/LICENSE" rel="external nofollow" target="_blank">MIT</a> 许可协议。转载请注明出处！
+        </li>
+        
+      </ul>
+    </div>
     
 
   </div>
@@ -743,15 +589,15 @@
         		</li>
       		 
         		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color5">mysql更改密码</a>
+        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color1">linux</a>
         		</li>
       		 
         		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color5">关闭mysql服务</a>
+        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color1">nginx</a>
         		</li>
       		 
         		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color3">作业</a>
+        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color4">php</a>
         		</li>
       		
 		</ul>
@@ -760,16 +606,76 @@
     
 
     
-    <p class="article-more-link">
-      <a class="article-more-a" href="/2023/02/20/mysql%E5%AE%89%E8%A3%85%E6%97%B6%E7%9A%84%E5%9D%91/">展开全文 >></a>
-    </p>
+
     
+    
+<div class="share-btn share-icons tooltip-left">
+  <div class="tooltip tooltip-east">
+    <span class="tooltip-item">
+      <a href="javascript:;" class="share-sns share-outer">
+        <i class="icon icon-share"></i>
+      </a>
+    </span>
+    <span class="tooltip-content">
+      <div class="share-wrap">
+        <div class="share-icons">
+          <a class="weibo share-sns" href="javascript:;" data-type="weibo">
+            <i class="icon icon-weibo"></i>
+          </a>
+          <!-- <a class="weixin share-sns wxFab" href="javascript:;" data-type="weixin">
+            <i class="icon icon-weixin"></i>
+          </a> -->
+          <a class="qq share-sns" href="javascript:;" data-type="qq">
+            <i class="icon icon-qq"></i>
+          </a>
+          <a class="douban share-sns" href="javascript:;" data-type="douban">
+            <i class="icon icon-douban"></i>
+          </a>
+          <a class="qzone share-sns" href="javascript:;" data-type="qzone">
+            <i class="icon icon-qzone"></i>
+          </a>
+          <a class="facebook share-sns" href="javascript:;" data-type="facebook">
+            <i class="icon icon-facebook"></i>
+          </a>
+          <a class="twitter share-sns" href="javascript:;" data-type="twitter">
+            <i class="icon icon-twitter"></i>
+          </a>
+          <a class="google share-sns" href="javascript:;" data-type="google">
+            <i class="icon icon-google"></i>
+          </a>
+        </div>
+      </div>
+    </span>
+  </div>
+</div>
+
+<div class="page-modal wx-share js-wx-box">
+    <a class="close js-modal-close" href="javascript:;"><i class="icon icon-close"></i></a>
+    <p>扫一扫，分享到微信</p>
+    <div class="wx-qrcode">
+     <!-- <img src="//pan.baidu.com/share/qrcode?url=https://lzq-hopego.github.io/2023/05/20/%E5%9C%A8Centos8-RHEL8%E4%B8%AD%E9%83%A8%E7%BD%B2LNMP%E7%8E%AF%E5%A2%83/" alt="微信分享二维码"> -->
+    </div>
+</div>
+
+<div class="mask js-mask"></div>
 
     
     <div class="clearfix"></div>
   </div>
   </div>
 </article>
+
+
+<nav id="article-nav">
+  
+  
+    <a href="/2023/05/18/eNSP%E5%AE%89%E8%A3%85%E5%8C%85/" id="article-nav-older" class="article-nav-link-wrap">
+      <div class="article-nav-title">eNSP安装包</div>
+      <i class="icon-circle-right"></i>
+    </a>
+  
+</nav>
+
 
 <aside class="wrap-side-operation">
     <div class="mod-side-operation">
@@ -784,109 +690,19 @@
         </div>
         
         
-    </div>
-</aside>
-
-
-
-
-
-  
-
-  
-    <article id="post-get-music-lizhanqi的使用方法，酷狗，网易云，多合一下载" class="article article-type-post  article-index" itemscope itemprop="blogPost">
-  <div class="article-inner">
-    
-      <header class="article-header">
-  
-  
-    <h1 itemprop="name">
-	
-	  <a class="article-title" href="/2022/12/30/get-music-lizhanqi%E7%9A%84%E4%BD%BF%E7%94%A8%E6%96%B9%E6%B3%95%EF%BC%8C%E9%85%B7%E7%8B%97%EF%BC%8C%E7%BD%91%E6%98%93%E4%BA%91%EF%BC%8C%E5%A4%9A%E5%90%88%E4%B8%80%E4%B8%8B%E8%BD%BD/" target="_blank">get-music-lizhanqi的使用方法，酷狗，网易云，多合一下载</a>
-  
-    </h1>
-  
-
-
-  
-  
-<a href="/2022/12/30/get-music-lizhanqi%E7%9A%84%E4%BD%BF%E7%94%A8%E6%96%B9%E6%B3%95%EF%BC%8C%E9%85%B7%E7%8B%97%EF%BC%8C%E7%BD%91%E6%98%93%E4%BA%91%EF%BC%8C%E5%A4%9A%E5%90%88%E4%B8%80%E4%B8%8B%E8%BD%BD/" class="archive-article-date">
-        <time datetime="2022-12-29T16:48:01.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2022-12-30</time>
-</a>
-
-  
-  
-    
-
-  
-  </header>
-  
-  <div class="article-entry" itemprop="articleBody">
-    
-    <h2 id="get-music-lizhanqi是一个非常好用的下载音乐的python第三方库，下面我们来介绍和使用它"><a href="#get-music-lizhanqi是一个非常好用的下载音乐的python第三方库，下面我们来介绍和使用它" class="headerlink" title="get-music-lizhanqi是一个非常好用的下载音乐的python第三方库，下面我们来介绍和使用它"></a>get-music-lizhanqi是一个非常好用的下载音乐的python第三方库，下面我们来介绍和使用它</h2>
-    
-    <a class="article-more-a" href="/2022/12/30/get-music-lizhanqi%E7%9A%84%E4%BD%BF%E7%94%A8%E6%96%B9%E6%B3%95%EF%BC%8C%E9%85%B7%E7%8B%97%EF%BC%8C%E7%BD%91%E6%98%93%E4%BA%91%EF%BC%8C%E5%A4%9A%E5%90%88%E4%B8%80%E4%B8%8B%E8%BD%BD/#more">more >></a>
-    
-    
-
-    
-
-    
-
-  </div>
-  <div class="article-info article-info-index">
-    
-    
-	<div class="article-tag tagcloud">
-		<i class="icon-price-tags icon"></i>
-		<ul class="article-tag-list">
-			 
-        		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color2">python</a>
-        		</li>
-      		 
-        		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color4">get-music-lizhanqi</a>
-        		</li>
-      		 
-        		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color1">多合一下载</a>
-        		</li>
-      		 
-        		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color5">音乐排行</a>
-        		</li>
-      		
-		</ul>
-	</div>
-
-    
-
-    
-    <p class="article-more-link">
-      <a class="article-more-a" href="/2022/12/30/get-music-lizhanqi%E7%9A%84%E4%BD%BF%E7%94%A8%E6%96%B9%E6%B3%95%EF%BC%8C%E9%85%B7%E7%8B%97%EF%BC%8C%E7%BD%91%E6%98%93%E4%BA%91%EF%BC%8C%E5%A4%9A%E5%90%88%E4%B8%80%E4%B8%8B%E8%BD%BD/">展开全文 >></a>
-    </p>
-    
-
-    
-    <div class="clearfix"></div>
-  </div>
-  </div>
-</article>
-
-<aside class="wrap-side-operation">
-    <div class="mod-side-operation">
-        
-        <div class="jump-container" id="js-jump-container" style="display:none;">
-            <a href="javascript:void(0)" class="mod-side-operation__jump-to-top">
-                <i class="icon-font icon-back"></i>
-            </a>
-            <div id="js-jump-plan-container" class="jump-plan-container" style="top: -11px;">
-                <i class="icon-font icon-plane jump-plane"></i>
+        <div class="toc-container tooltip-left">
+            <i class="icon-font icon-category"></i>
+            <div class="tooltip tooltip-east">
+                <span class="tooltip-item">
+                </span>
+                <span class="tooltip-content">
+                    <div class="toc-article">
+                    <ol class="toc"><li class="toc-item toc-level-2"><a class="toc-link" href="#LNMP%E7%8E%AF%E5%A2%83"><span class="toc-number">1.</span> <span class="toc-text">LNMP环境</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E5%87%86%E5%A4%87"><span class="toc-number">2.</span> <span class="toc-text">准备</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E7%AC%AC%E4%B8%80%E6%AD%A5-CentOS-8%E5%88%87%E6%8D%A2%E6%BA%90"><span class="toc-number">3.</span> <span class="toc-text">第一步,CentOS 8切换源</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#1%E3%80%81%E6%89%A7%E8%A1%8C%E4%BB%A5%E4%B8%8B%E5%91%BD%E4%BB%A4%EF%BC%8C%E5%A4%87%E4%BB%BD%E4%B9%8B%E5%89%8D%E7%9A%84repo%E6%96%87%E4%BB%B6%E3%80%82"><span class="toc-number">3.1.</span> <span class="toc-text">1、执行以下命令，备份之前的repo文件。</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#2%E3%80%81%E6%89%A7%E8%A1%8C%E4%BB%A5%E4%B8%8B%E5%91%BD%E4%BB%A4%EF%BC%8C%E4%B8%8B%E8%BD%BD%E6%9C%80%E6%96%B0%E7%9A%84repo%E6%96%87%E4%BB%B6%E3%80%82"><span class="toc-number">3.2.</span> <span class="toc-text">2、执行以下命令，下载最新的repo文件。</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#3%E3%80%81%E6%89%A7%E8%A1%8C%E4%BB%A5%E4%B8%8B%E5%91%BD%E4%BB%A4%EF%BC%8C%E6%9B%BF%E6%8D%A2repo%E6%96%87%E4%BB%B6%E4%B8%AD%E7%9A%84%E9%93%BE%E6%8E%A5%E3%80%82"><span class="toc-number">3.3.</span> <span class="toc-text">3、执行以下命令，替换repo文件中的链接。</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#4%E3%80%81%E6%89%A7%E8%A1%8C%E4%BB%A5%E4%B8%8B%E5%91%BD%E4%BB%A4%EF%BC%8C%E9%87%8D%E6%96%B0%E5%88%9B%E5%BB%BA%E7%BC%93%E5%AD%98%E3%80%82"><span class="toc-number">3.4.</span> <span class="toc-text">4、执行以下命令，重新创建缓存。</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#5%E3%80%81%E6%89%A7%E8%A1%8C%E4%BB%A5%E4%B8%8B%E5%91%BD%E4%BB%A4%EF%BC%8C%E6%9F%A5%E7%9C%8Brepo%E6%96%87%E4%BB%B6%E3%80%82"><span class="toc-number">3.5.</span> <span class="toc-text">5、执行以下命令，查看repo文件。</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#6%E3%80%81%E6%89%A7%E8%A1%8C%E4%BB%A5%E4%B8%8B%E5%91%BD%E4%BB%A4%EF%BC%8C%E5%88%A0%E9%99%A4%E4%B9%8B%E5%89%8D%E5%A4%87%E4%BB%BD%E7%9A%84repo%E6%96%87%E4%BB%B6%E3%80%82"><span class="toc-number">3.6.</span> <span class="toc-text">6、执行以下命令，删除之前备份的repo文件。</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#7%E3%80%81%E5%88%A0%E9%99%A4%E4%B9%8B%E5%90%8E%EF%BC%8C%E6%89%A7%E8%A1%8C%E4%BB%A5%E4%B8%8B%E5%91%BD%E4%BB%A4%E8%BF%9B%E8%A1%8C%E6%9F%A5%E8%AF%A2%E3%80%82"><span class="toc-number">3.7.</span> <span class="toc-text">7、删除之后，执行以下命令进行查询。</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E7%AC%AC%E4%BA%8C%E6%AD%A5-%E5%87%86%E5%A4%87%E7%BC%96%E8%AF%91%E7%8E%AF%E5%A2%83"><span class="toc-number">4.</span> <span class="toc-text">第二步,准备编译环境</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#1%E3%80%81%E5%85%B3%E9%97%AD%E9%98%B2%E7%81%AB%E5%A2%99%E3%80%82"><span class="toc-number">4.1.</span> <span class="toc-text">1、关闭防火墙。</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#2-%E5%85%B3%E9%97%AD%E9%98%B2%E7%81%AB%E5%A2%99%E3%80%82%E5%A6%82%E6%9E%9C%E9%98%B2%E7%81%AB%E5%A2%99%E4%B8%BA%E5%85%B3%E9%97%AD%E7%8A%B6%E6%80%81%E5%8F%AF%E4%BB%A5%E5%BF%BD%E7%95%A5%E6%AD%A4%E6%AD%A5%E9%AA%A4%E3%80%82"><span class="toc-number">4.2.</span> <span class="toc-text">2. 关闭防火墙。如果防火墙为关闭状态可以忽略此步骤。</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E7%AC%AC%E4%B8%89%E6%AD%A5-%E5%AE%89%E8%A3%85Nginx"><span class="toc-number">5.</span> <span class="toc-text">第三步, 安装Nginx</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#1%E3%80%81%E6%89%A7%E8%A1%8C%E5%A6%82%E4%B8%8B%E5%91%BD%E4%BB%A4%EF%BC%8C%E5%AE%89%E8%A3%85Nginx%E3%80%82"><span class="toc-number">5.1.</span> <span class="toc-text">1、执行如下命令，安装Nginx。</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#2%E3%80%81%E6%89%A7%E8%A1%8C%E5%A6%82%E4%B8%8B%E5%91%BD%E4%BB%A4%EF%BC%8C%E6%9F%A5%E7%9C%8BNginx%E7%89%88%E6%9C%AC%E3%80%82"><span class="toc-number">5.2.</span> <span class="toc-text">2、执行如下命令，查看Nginx版本。</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E7%AC%AC%E5%9B%9B%E6%AD%A5-%E5%AE%89%E8%A3%85MySQL"><span class="toc-number">6.</span> <span class="toc-text">第四步,安装MySQL</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#1%E3%80%81%E6%89%A7%E8%A1%8C%E5%A6%82%E4%B8%8B%E5%91%BD%E4%BB%A4%EF%BC%8C%E5%AE%89%E8%A3%85MySQL%E3%80%82"><span class="toc-number">6.1.</span> <span class="toc-text">1、执行如下命令，安装MySQL。</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#2%E3%80%81%E6%89%A7%E8%A1%8C%E5%A6%82%E4%B8%8B%E5%91%BD%E4%BB%A4%EF%BC%8C%E6%9F%A5%E7%9C%8BMySQL%E7%89%88%E6%9C%AC%E3%80%82"><span class="toc-number">6.2.</span> <span class="toc-text">2、执行如下命令，查看MySQL版本。</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E7%AC%AC%E4%BA%94%E6%AD%A5-%E5%AE%89%E8%A3%85PHP"><span class="toc-number">7.</span> <span class="toc-text">第五步,安装PHP</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#1%E3%80%81%E6%89%A7%E8%A1%8C%E5%A6%82%E4%B8%8B%E5%91%BD%E4%BB%A4%EF%BC%8C%E6%B7%BB%E5%8A%A0%E5%B9%B6%E6%9B%B4%E6%96%B0epel%E6%BA%90%E3%80%82"><span class="toc-number">7.1.</span> <span class="toc-text">1、执行如下命令，添加并更新epel源。</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#2%E3%80%81%E6%89%A7%E8%A1%8C%E4%BB%A5%E4%B8%8B%E5%91%BD%E4%BB%A4%EF%BC%8C%E5%88%A0%E9%99%A4%E7%BC%93%E5%AD%98%E7%9A%84%E6%97%A0%E7%94%A8%E8%BD%AF%E4%BB%B6%E5%8C%85%E5%B9%B6%E6%9B%B4%E6%96%B0%E8%BD%AF%E4%BB%B6%E6%BA%90%E3%80%82"><span class="toc-number">7.2.</span> <span class="toc-text">2、执行以下命令，删除缓存的无用软件包并更新软件源。</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#3%E3%80%81%E6%89%A7%E8%A1%8C%E4%BB%A5%E4%B8%8B%E5%91%BD%E4%BB%A4%EF%BC%8C%E5%90%AF%E7%94%A8php-7-3%E6%A8%A1%E5%9D%97%E3%80%82"><span class="toc-number">7.3.</span> <span class="toc-text">3、执行以下命令，启用php:7.3模块。</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#4%E3%80%81%E6%89%A7%E8%A1%8C%E4%BB%A5%E4%B8%8B%E5%91%BD%E4%BB%A4%EF%BC%8C%E5%AE%89%E8%A3%85PHP%E7%9B%B8%E5%BA%94%E7%9A%84%E6%A8%A1%E5%9D%97%E3%80%82"><span class="toc-number">7.4.</span> <span class="toc-text">4、执行以下命令，安装PHP相应的模块。</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E7%AC%AC%E5%85%AD%E6%AD%A5-%E9%85%8D%E7%BD%AENginx"><span class="toc-number">8.</span> <span class="toc-text">第六步,配置Nginx</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#%E7%8E%B0%E5%9C%A8%E4%BD%A0%E7%9A%84nginx%E8%83%BD%E5%A4%9F%E6%AD%A3%E5%B8%B8%E5%BC%80%E5%90%AF%EF%BC%8C%E6%8E%A5%E4%B8%8B%E6%9D%A5%E9%9C%80%E8%A6%81%E5%AF%B9nginx%E7%9A%84%E9%85%8D%E7%BD%AE%E5%81%9A%E4%BF%AE%E6%94%B9"><span class="toc-number">8.1.</span> <span class="toc-text">现在你的nginx能够正常开启，接下来需要对nginx的配置做修改</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#1%E3%80%81%E6%89%A7%E8%A1%8C%E5%A6%82%E4%B8%8B%E5%91%BD%E4%BB%A4%EF%BC%8C%E6%9F%A5%E7%9C%8BNginx%E9%85%8D%E7%BD%AE%E6%96%87%E4%BB%B6%E7%9A%84%E9%BB%98%E8%AE%A4%E8%B7%AF%E5%BE%84%E3%80%82"><span class="toc-number">8.2.</span> <span class="toc-text">1、执行如下命令，查看Nginx配置文件的默认路径。</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#2%E3%80%81%E6%89%A7%E8%A1%8C%E5%A6%82%E4%B8%8B%E5%91%BD%E4%BB%A4%EF%BC%8C%E5%9C%A8%E9%85%8D%E7%BD%AE%E6%96%87%E4%BB%B6%E7%9A%84%E9%BB%98%E8%AE%A4%E8%B7%AF%E5%BE%84%E4%B8%8B%EF%BC%8C%E5%A4%87%E4%BB%BD%E9%BB%98%E8%AE%A4%E9%85%8D%E7%BD%AE%E6%96%87%E4%BB%B6%E3%80%82"><span class="toc-number">8.3.</span> <span class="toc-text">2、执行如下命令，在配置文件的默认路径下，备份默认配置文件。</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#3%E3%80%81%E4%BF%AE%E6%94%B9%E9%BB%98%E8%AE%A4%E9%85%8D%E7%BD%AE%E6%96%87%E4%BB%B6%E3%80%82"><span class="toc-number">8.4.</span> <span class="toc-text">3、修改默认配置文件。</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#5%E3%80%81%E6%89%A7%E8%A1%8C%E4%B8%80%E4%B8%8B%E5%91%BD%E4%BB%A4%EF%BC%8C%E8%AE%BE%E7%BD%AENginx%E6%9C%8D%E5%8A%A1%E5%BC%80%E6%9C%BA%E8%87%AA%E5%90%AF%E5%8A%A8%E3%80%82"><span class="toc-number">8.5.</span> <span class="toc-text">5、执行一下命令，设置Nginx服务开机自启动。</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E7%AC%AC%E4%B8%83%E6%AD%A5-%E9%85%8D%E7%BD%AEMySQL"><span class="toc-number">9.</span> <span class="toc-text">第七步,配置MySQL</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#1-%E6%89%A7%E8%A1%8C%E5%A6%82%E4%B8%8B%E5%91%BD%E4%BB%A4%EF%BC%8C%E5%90%AF%E5%8A%A8MySQL%EF%BC%8C%E5%B9%B6%E8%AE%BE%E7%BD%AE%E4%B8%BA%E5%BC%80%E6%9C%BA%E8%87%AA%E5%90%AF%E5%8A%A8%E3%80%82"><span class="toc-number">9.1.</span> <span class="toc-text">1.执行如下命令，启动MySQL，并设置为开机自启动。</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#2-%E6%89%A7%E8%A1%8C%E5%A6%82%E4%B8%8B%E5%91%BD%E4%BB%A4%EF%BC%8C%E6%9F%A5%E7%9C%8BMySQL%E6%98%AF%E5%90%A6%E5%B7%B2%E5%90%AF%E5%8A%A8%E3%80%82"><span class="toc-number">9.2.</span> <span class="toc-text">2.执行如下命令，查看MySQL是否已启动。</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#3-%E6%89%A7%E8%A1%8C%E4%B8%8B%E5%91%BD%E4%BB%A4%EF%BC%8C%E6%89%A7%E8%A1%8CMySQL%E5%AE%89%E5%85%A8%E6%80%A7%E6%93%8D%E4%BD%9C%E5%B9%B6%E8%AE%BE%E7%BD%AE%E5%AF%86%E7%A0%81%E3%80%82"><span class="toc-number">9.3.</span> <span class="toc-text">3.执行下命令，执行MySQL安全性操作并设置密码。</span></a><ol class="toc-child"><li class="toc-item toc-level-4"><a class="toc-link" href="#1-%E8%BE%93%E5%85%A5Y%E5%B9%B6%E5%9B%9E%E8%BD%A6%E5%BC%80%E5%A7%8B%E7%9B%B8%E5%85%B3%E9%85%8D%E7%BD%AE%E3%80%82"><span class="toc-number">9.3.1.</span> <span class="toc-text">1.输入Y并回车开始相关配置。</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#2-%E9%80%89%E6%8B%A9%E5%AF%86%E7%A0%81%E9%AA%8C%E8%AF%81%E7%AD%96%E7%95%A5%E5%BC%BA%E5%BA%A6%EF%BC%8C%E8%BE%93%E5%85%A52%E5%B9%B6%E5%9B%9E%E8%BD%A6%E3%80%82"><span class="toc-number">9.3.2.</span> <span class="toc-text">2.选择密码验证策略强度，输入2并回车。</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#3-%E8%AE%BE%E7%BD%AEMySQL%E7%9A%84%E6%96%B0%E5%AF%86%E7%A0%81%E5%B9%B6%E7%A1%AE%E8%AE%A4%E3%80%82%E6%9C%AC%E7%A4%BA%E4%BE%8B%E8%AE%BE%E7%BD%AE%E5%AF%86%E7%A0%81PASSword123%EF%BC%81%E3%80%82"><span class="toc-number">9.3.3.</span> <span class="toc-text">3.设置MySQL的新密码并确认。本示例设置密码PASSword123！。</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#4-%E8%BE%93%E5%85%A5Y%E5%B9%B6%E5%9B%9E%E8%BD%A6%E7%BB%A7%E7%BB%AD%E4%BD%BF%E7%94%A8%E6%8F%90%E4%BE%9B%E7%9A%84%E5%AF%86%E7%A0%81%E3%80%82"><span class="toc-number">9.3.4.</span> <span class="toc-text">4.输入Y并回车继续使用提供的密码。</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#5-%E8%BE%93%E5%85%A5Y%E5%B9%B6%E5%9B%9E%E8%BD%A6%E7%A7%BB%E9%99%A4%E5%8C%BF%E5%90%8D%E7%94%A8%E6%88%B7%E3%80%82"><span class="toc-number">9.3.5.</span> <span class="toc-text">5.输入Y并回车移除匿名用户。</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#6-%E8%BE%93%E5%85%A5Y%E5%B9%B6%E5%9B%9E%E8%BD%A6%E7%A7%BB%E9%99%A4%E5%8C%BF%E5%90%8D%E7%94%A8%E6%88%B7%E3%80%82"><span class="toc-number">9.3.6.</span> <span class="toc-text">6.输入Y并回车移除匿名用户。</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#7-%E5%85%A5Y%E5%B9%B6%E5%9B%9E%E8%BD%A6%E5%88%A0%E9%99%A4test%E5%BA%93%E4%BB%A5%E5%8F%8A%E5%AF%B9test%E5%BA%93%E7%9A%84%E8%AE%BF%E9%97%AE%E6%9D%83%E9%99%90%E3%80%82"><span class="toc-number">9.3.7.</span> <span class="toc-text">7.入Y并回车删除test库以及对test库的访问权限。</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#8-%E8%BE%93%E5%85%A5Y%E5%B9%B6%E5%9B%9E%E8%BD%A6%E9%87%8D%E6%96%B0%E5%8A%A0%E8%BD%BD%E6%8E%88%E6%9D%83%E8%A1%A8%E3%80%82"><span class="toc-number">9.3.8.</span> <span class="toc-text">8.输入Y并回车重新加载授权表。</span></a></li></ol></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E7%AC%AC%E5%85%AB%E6%AD%A5-%E9%85%8D%E7%BD%AEPHP"><span class="toc-number">10.</span> <span class="toc-text">第八步,配置PHP</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#1-%E4%BF%AE%E6%94%B9PHP%E9%85%8D%E7%BD%AE%E6%96%87%E4%BB%B6%E3%80%82"><span class="toc-number">10.1.</span> <span class="toc-text">1.修改PHP配置文件。</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#2%E3%80%81%E6%89%A7%E8%A1%8C%E4%BB%A5%E4%B8%8B%E5%91%BD%E4%BB%A4%EF%BC%8C%E8%AE%BE%E7%BD%AEPHP-FPM%E5%BC%80%E6%9C%BA%E8%87%AA%E5%90%AF%E5%8A%A8%E3%80%82"><span class="toc-number">10.2.</span> <span class="toc-text">2、执行以下命令，设置PHP-FPM开机自启动。</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E7%AC%AC%E4%B9%9D%E6%AD%A5-%E6%B5%8B%E8%AF%95"><span class="toc-number">11.</span> <span class="toc-text">第九步,测试</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#1%E3%80%81%E5%9C%A8%E6%82%A8%E7%9A%84%E6%9C%AC%E6%9C%BA%E6%B5%8F%E8%A7%88%E5%99%A8%E4%B8%AD%EF%BC%8C%E6%89%93%E5%BC%80%E6%96%B0%E9%A1%B5%E7%AD%BE%EF%BC%8C%E5%9C%A8%E5%9C%B0%E5%9D%80%E6%A0%8F%E8%BE%93%E5%85%A5http-x2F-x2F-lt-ECS%E5%AE%9E%E4%BE%8B%E5%85%AC%E7%BD%91IP%E5%9C%B0%E5%9D%80-gt-x2F-phpinfo-php%E3%80%82"><span class="toc-number">11.1.</span> <span class="toc-text">1、在您的本机浏览器中，打开新页签，在地址栏输入http:&#x2F;&#x2F;&lt;ECS实例公网IP地址&gt;&#x2F;phpinfo.php。</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E7%AC%AC%E5%8D%81%E6%AD%A5-%E6%94%B6%E5%B0%BE"><span class="toc-number">12.</span> <span class="toc-text">第十步,收尾</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E7%AC%AC%E5%8D%81%E4%B8%80%E6%AD%A5-%E4%BD%BF%E7%94%A8python%E8%BF%9E%E6%8E%A5%E6%95%B0%E6%8D%AE%E5%BA%93%E6%B5%8B%E8%AF%95mysql%E6%98%AF%E5%90%A6%E5%8F%AF%E7%94%A8"><span class="toc-number">13.</span> <span class="toc-text">第十一步,使用python连接数据库测试mysql是否可用</span></a></li></ol>
+                    </div>
+                </span>
             </div>
         </div>
         
-        
     </div>
 </aside>
 
@@ -894,117 +710,28 @@
 
 
 
-  
 
-  
-    <article id="post-第一篇博客" class="article article-type-post  article-index" itemscope itemprop="blogPost">
-  <div class="article-inner">
-    
-      <header class="article-header">
-  
-  
-    <h1 itemprop="name">
-	
-	  <a class="article-title" href="/2022/12/28/%E7%AC%AC%E4%B8%80%E7%AF%87%E5%8D%9A%E5%AE%A2/" target="_blank">第一篇博客，pip换源，清华源</a>
-  
-    </h1>
-  
+
+
+
+
+
+
+
 
 
   
-  
-<a href="/2022/12/28/%E7%AC%AC%E4%B8%80%E7%AF%87%E5%8D%9A%E5%AE%A2/" class="archive-article-date">
-        <time datetime="2022-12-28T04:45:04.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2022-12-28</time>
-</a>
-
-  
-  
-    
-
-  
-  </header>
-  
-  <div class="article-entry" itemprop="articleBody">
-    
-    <h2 id="使用pip下载第三方库"><a href="#使用pip下载第三方库" class="headerlink" title="使用pip下载第三方库"></a>使用pip下载第三方库</h2>
-    
-    <a class="article-more-a" href="/2022/12/28/%E7%AC%AC%E4%B8%80%E7%AF%87%E5%8D%9A%E5%AE%A2/#more">more >></a>
-    
-    
-
-    
-
-    
-
-  </div>
-  <div class="article-info article-info-index">
-    
-    
-	<div class="article-tag tagcloud">
-		<i class="icon-price-tags icon"></i>
-		<ul class="article-tag-list">
-			 
-        		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color2">python</a>
-        		</li>
-      		 
-        		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color4">清华源</a>
-        		</li>
-      		 
-        		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color4">pip</a>
-        		</li>
-      		 
-        		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color3">随笔</a>
-        		</li>
-      		
-		</ul>
+	<div id="beaudar-comment">
+		<link rel="stylesheet" href="/lib/beaudar.css"> <!--这里是我自己的css文件，如果你没有弄的话，可以不写。-->
+		<script src="https://beaudar.lipk.org/client.js" 
+				repo="lzq-hopego/lzq-hopego.github.io" 
+				issue-term="pathname"
+				label="comment"
+				theme="github-light"
+				branch="main"
+				crossorigin="anonymous" async>
+			</script>
 	</div>
-
-    
-
-    
-    <p class="article-more-link">
-      <a class="article-more-a" href="/2022/12/28/%E7%AC%AC%E4%B8%80%E7%AF%87%E5%8D%9A%E5%AE%A2/">展开全文 >></a>
-    </p>
-    
-
-    
-    <div class="clearfix"></div>
-  </div>
-  </div>
-</article>
-
-<aside class="wrap-side-operation">
-    <div class="mod-side-operation">
-        
-        <div class="jump-container" id="js-jump-container" style="display:none;">
-            <a href="javascript:void(0)" class="mod-side-operation__jump-to-top">
-                <i class="icon-font icon-back"></i>
-            </a>
-            <div id="js-jump-plan-container" class="jump-plan-container" style="top: -11px;">
-                <i class="icon-font icon-plane jump-plane"></i>
-            </div>
-        </div>
-        
-        
-    </div>
-</aside>
-
-
-
-
-
-  
-
-  
-  
-    <nav id="page-nav">
-      <a class="extend prev" rel="prev" href="/">上一页</a><a class="page-number" href="/">1</a><span class="page-number current">2</span>
-    </nav>
-  
 
 
           </div>
@@ -1039,8 +766,8 @@
     <script>
 	var yiliaConfig = {
 		mathjax: false,
-		isHome: true,
-		isPost: false,
+		isHome: false,
+		isPost: true,
 		isArchive: false,
 		isTag: false,
 		isCategory: false,
