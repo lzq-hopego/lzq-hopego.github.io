@@ -6,17 +6,37 @@
   <meta name="renderer" content="webkit">
   <meta http-equiv="X-UA-Compatible" content="IE=edge" >
   <link rel="dns-prefetch" href="https://lzq-hopego.github.io">
-  <title>Archives: 2023 | Li Zhan Qi</title>
+  <title>部署宝塔面板,宝塔面板部署LNMP服务 | Li Zhan Qi</title>
   <meta name="generator" content="hexo-theme-yilia-plus">
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
   
-  <meta property="og:type" content="website">
-<meta property="og:title" content="Li Zhan Qi">
-<meta property="og:url" content="https://lzq-hopego.github.io/archives/2023/index.html">
+  <meta name="description" content="宝塔部署教程，宝塔部署LNMP教程 引言:有时我们只是需要一个更方便的部署网站的方式，例如集成开发环境什么的，而部署网站我们有个更出名的管理软件，宝塔面板，本节中我们使用本地的RHEL8部署宝塔面板，使用的yum源是红帽的源">
+<meta property="og:type" content="article">
+<meta property="og:title" content="部署宝塔面板,宝塔面板部署LNMP服务">
+<meta property="og:url" content="https://lzq-hopego.github.io/2023/05/21/%E9%83%A8%E7%BD%B2%E5%AE%9D%E5%A1%94%E9%9D%A2%E6%9D%BF-%E5%AE%9D%E5%A1%94%E9%9D%A2%E6%9D%BF%E9%83%A8%E7%BD%B2LNMP%E6%9C%8D%E5%8A%A1/index.html">
 <meta property="og:site_name" content="Li Zhan Qi">
+<meta property="og:description" content="宝塔部署教程，宝塔部署LNMP教程 引言:有时我们只是需要一个更方便的部署网站的方式，例如集成开发环境什么的，而部署网站我们有个更出名的管理软件，宝塔面板，本节中我们使用本地的RHEL8部署宝塔面板，使用的yum源是红帽的源">
 <meta property="og:locale" content="zh_CN">
+<meta property="og:image" content="https://img-blog.csdnimg.cn/9e5f0ba7681842efb18f2df3c15c0459.jpeg#pic_center">
+<meta property="og:image" content="https://img-blog.csdnimg.cn/img_convert/43b35e440ff2a4b18f38ae4d91e4de38.jpeg">
+<meta property="og:image" content="https://img-blog.csdnimg.cn/19293b15c4ab45b6a3fe461ee72cc34a.png#pic_center">
+<meta property="og:image" content="https://img-blog.csdnimg.cn/7fe4d7a018f54b199156e763973df10b.png#pic_center">
+<meta property="og:image" content="https://img-blog.csdnimg.cn/791323fa8b384cb78fb4afe6517ec269.png#pic_center">
+<meta property="og:image" content="https://img-blog.csdnimg.cn/f47ee282acf34817bdb1de16befca0df.png#pic_center">
+<meta property="og:image" content="https://img-blog.csdnimg.cn/img_convert/9469e68518ab855203e600ea5b3216b6.png">
+<meta property="og:image" content="https://img-blog.csdnimg.cn/img_convert/6c40eee6ac999d509d45ced43cecf77b.png">
+<meta property="og:image" content="https://img-blog.csdnimg.cn/d8e7081ed93a4d01b5ec4405bfafd39f.png#pic_center">
+<meta property="og:image" content="https://img-blog.csdnimg.cn/716874b0fc26436c8b4d884157d94cce.png#pic_center">
+<meta property="og:image" content="https://img-blog.csdnimg.cn/5c6e7f3e3bb94583a8048e6152171d60.png#pic_center">
+<meta property="og:image" content="https://img-blog.csdnimg.cn/b845c7656b9546a794c61ad493d06ac1.png#pic_center">
+<meta property="og:image" content="https://img-blog.csdnimg.cn/58aabda2cc9748bdb95517de7582c674.png#pic_center">
+<meta property="article:published_time" content="2023-05-21T02:37:57.000Z">
+<meta property="article:modified_time" content="2023-05-21T02:38:47.866Z">
 <meta property="article:author" content="Li Zhan Qi">
+<meta property="article:tag" content="随笔">
+<meta property="article:tag" content="linux">
 <meta name="twitter:card" content="summary">
+<meta name="twitter:image" content="https://img-blog.csdnimg.cn/9e5f0ba7681842efb18f2df3c15c0459.jpeg#pic_center">
   
     <link rel="alternative" href="/atom.xml" title="Li Zhan Qi" type="application/atom+xml">
   
@@ -262,41 +282,178 @@
               class="anm-canvas"></canvas>
           </div>
           <div id="js-content" class="content-ll">
-            
+            <article id="post-部署宝塔面板-宝塔面板部署LNMP服务" class="article article-type-post " itemscope itemprop="blogPost">
+  <div class="article-inner">
+    
+      <header class="article-header">
   
   
-    
-    
-      
-      
-      <section class="archives-wrap">
-        <div class="archive-year-wrap">
-          <a href="/archives/2023" class="archive-year">2023</a>
-        </div>
-        <div class="archives">
-    
-    <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-      	<div class="article-meta">
-	      	
+    <h1 class="article-title" itemprop="name">
+      部署宝塔面板,宝塔面板部署LNMP服务
+    </h1>
+  
+
+
+  
+  
+        
+        <span id="busuanzi_container_page_pv" style='display:none' class="archive-article-date">
+              <i class="icon-smile icon"></i> 阅读数：<span id="busuanzi_value_page_pv"></span>次
+        </span>
+
 <a href="/2023/05/21/%E9%83%A8%E7%BD%B2%E5%AE%9D%E5%A1%94%E9%9D%A2%E6%9D%BF-%E5%AE%9D%E5%A1%94%E9%9D%A2%E6%9D%BF%E9%83%A8%E7%BD%B2LNMP%E6%9C%8D%E5%8A%A1/" class="archive-article-date">
         <time datetime="2023-05-21T02:37:57.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2023-05-21</time>
 </a>
 
-        </div>
-    	 
   
-    <h1 itemprop="name">
-	
-	  <a class="archive-article-title" href="/2023/05/21/%E9%83%A8%E7%BD%B2%E5%AE%9D%E5%A1%94%E9%9D%A2%E6%9D%BF-%E5%AE%9D%E5%A1%94%E9%9D%A2%E6%9D%BF%E9%83%A8%E7%BD%B2LNMP%E6%9C%8D%E5%8A%A1/" target="_blank">部署宝塔面板,宝塔面板部署LNMP服务</a>
   
-    </h1>
-  
+    
+<div style="margin-top:10px;">
+  <span class="post-time">
+    <span class="post-meta-item-icon">
+      <!-- fonts.scss -->
+      <!-- 百度字体平台:http://fontstore.baidu.com/static/editor/index.html -->
+      <i class="icon-statistics"></i>
+      <span class="post-meta-item-text"> 字数统计:</span>
+      <span class="post-count">809字</span>
+    </span>
+  </span>
+
+  <span class="post-time">
+    &nbsp; | &nbsp;
+    <span class="post-meta-item-icon">
+      <i class="icon-book icon"></i>
+      <span class="post-meta-item-text"> 阅读时长≈</span>
+      <span class="post-count">2分</span>
+    </span>
+  </span>
+</div>
 
 
-        <div class="article-info info-on-right">
+  
+  </header>
+  
+  <div class="article-entry" itemprop="articleBody">
+    
+    <h1 id="宝塔部署教程，宝塔部署LNMP教程"><a href="#宝塔部署教程，宝塔部署LNMP教程" class="headerlink" title="宝塔部署教程，宝塔部署LNMP教程"></a>宝塔部署教程，宝塔部署LNMP教程</h1><ul>
+<li>引言:有时我们只是需要一个更方便的部署网站的方式，例如集成开发环境什么的，而部署网站我们有个更出名的管理软件，宝塔面板，本节中我们使用本地的RHEL8部署宝塔面板，使用的yum源是红帽的源<span id="more"></span></li>
+</ul>
+<h2 id="1、安装宝塔面板"><a href="#1、安装宝塔面板" class="headerlink" title="1、安装宝塔面板"></a>1、安装宝塔面板</h2><ul>
+<li><p>使用命令</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">yum install -y wget &amp;&amp; wget -O install.sh https://download.bt.cn/install/install_6.0.sh &amp;&amp; sh install.sh ed8484bec</span><br></pre></td></tr></table></figure>
+
+<p><img src="https://img-blog.csdnimg.cn/9e5f0ba7681842efb18f2df3c15c0459.jpeg#pic_center" alt="在这里插入图片描述"></p>
+</li>
+<li><p>是否安装宝塔面板,输入y<img src="https://img-blog.csdnimg.cn/img_convert/43b35e440ff2a4b18f38ae4d91e4de38.jpeg"></p>
+</li>
+<li><p>接下来还会提示是否开启ssl，因为是本地机器，还没有ssl证书，所以选择n，或不选等待程序继续</p>
+</li>
+<li><p>等待漫长的安装即可，喝一杯茶，就能安装好，性能越好，安装的越快</p>
+</li>
+</ul>
+<h2 id="2、修改宝塔面板的默认密码"><a href="#2、修改宝塔面板的默认密码" class="headerlink" title="2、修改宝塔面板的默认密码"></a>2、修改宝塔面板的默认密码</h2><ul>
+<li><p>1、输入以下命令修改面板密码</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">bt 5</span><br></pre></td></tr></table></figure>
+</li>
+<li><p>2、输入以下命令修改面板的登录用户名</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">bt 6</span><br></pre></td></tr></table></figure>
+</li>
+<li><p>3、输入以下命令查看面板信息</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">bt 14</span><br></pre></td></tr></table></figure></li>
+</ul>
+<blockquote>
+<p>三条命令执行后结果如下</p>
+</blockquote>
+<p><img src="https://img-blog.csdnimg.cn/19293b15c4ab45b6a3fe461ee72cc34a.png#pic_center" alt="在这里插入图片描述"></p>
+<ul>
+<li><p>4、此时我们查看一下，面板的端口号是否被防火墙放行</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">firewalld-cmd --list-ports</span><br></pre></td></tr></table></figure></li>
+</ul>
+<blockquote>
+<p>如果和我一样则不用放行</p>
+</blockquote>
+<p><img src="https://img-blog.csdnimg.cn/7fe4d7a018f54b199156e763973df10b.png#pic_center" alt="在这里插入图片描述"></p>
+<blockquote>
+<p>如果为空,可以执行以下命令,需要注意的是29527是bt 14查看面板信息看到的端口号，每个人都不一样，注意开启自己的端口号就行了</p>
+</blockquote>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">firewall-cmd --zone=public --add-port=29527/tcp --permanent</span><br><span class="line"># 开启80 http服务端口</span><br><span class="line">firewall-cmd --zone=public --add-port80/tcp --permanent</span><br><span class="line"># 开启443 https服务端口</span><br><span class="line">firewall-cmd --zone=public --add-port=443/tcp --permanent</span><br></pre></td></tr></table></figure>
+
+
+
+<h2 id="3、安装部署LNMP"><a href="#3、安装部署LNMP" class="headerlink" title="3、安装部署LNMP"></a>3、安装部署LNMP</h2><ul>
+<li><p>执行命令查看宝塔的登录页面的ip，如果是自己的虚拟机使用内网登陆即可，如果使用的是云服务器使用外网登录即可，本机是自己电脑上的虚拟机，使用内网ip登录</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">bt 14</span><br></pre></td></tr></table></figure></li>
+</ul>
+<p><img src="https://img-blog.csdnimg.cn/791323fa8b384cb78fb4afe6517ec269.png#pic_center" alt="在这里插入图片描述"></p>
+<ul>
+<li>浏览器输入，进入到面板的用户协议页面，进度条要拉完才能用面板</li>
+</ul>
+<p><img src="https://img-blog.csdnimg.cn/f47ee282acf34817bdb1de16befca0df.png#pic_center" alt="在这里插入图片描述"></p>
+<ul>
+<li><p>进入到登录页面,输入之前设置的用户名和密码，即可，如果忘记可以重新执行bt 5设置密码,bt 6设置用户名</p>
+</li>
+<li><p>进入面板控制台之后需要登录自己的宝塔账号，没有的注册一个即可</p>
+<p><img src="https://img-blog.csdnimg.cn/img_convert/9469e68518ab855203e600ea5b3216b6.png"></p>
+</li>
+<li><p>一切完成后，会提示你安装LNMP或LAMP，这里我们安装LNMP</p>
+<p><img src="https://img-blog.csdnimg.cn/img_convert/6c40eee6ac999d509d45ced43cecf77b.png"></p>
+</li>
+</ul>
+<p><img src="https://img-blog.csdnimg.cn/d8e7081ed93a4d01b5ec4405bfafd39f.png#pic_center" alt="在这里插入图片描述"></p>
+<ul>
+<li><p>漫长的等待之后安装成功，我们使用该环境搭建一个自己的网站</p>
+<blockquote>
+<p>在最左侧切换到网站选项点击添加站点，因为没有域名因此使用当前的内网ip当作域名，根目录选自己网站源码为根目录，如果和我一样啥都没有就默认点提交即可</p>
+</blockquote>
+</li>
+</ul>
+<p><img src="https://img-blog.csdnimg.cn/716874b0fc26436c8b4d884157d94cce.png#pic_center" alt="在这里插入图片描述"></p>
+<blockquote>
+<p>创建成功</p>
+</blockquote>
+<p><img src="https://img-blog.csdnimg.cn/5c6e7f3e3bb94583a8048e6152171d60.png#pic_center" alt="在这里插入图片描述"></p>
+<blockquote>
+<p>点开可以做更多的操作，例如反向代理，ssl证书，修改根目录，修改域名</p>
+</blockquote>
+<p><img src="https://img-blog.csdnimg.cn/b845c7656b9546a794c61ad493d06ac1.png#pic_center" alt="在这里插入图片描述"></p>
+<blockquote>
+<p>好的，接下来我们直接访问，我们使用ip访问，因为我们没有域名</p>
+</blockquote>
+<p><img src="https://img-blog.csdnimg.cn/58aabda2cc9748bdb95517de7582c674.png#pic_center" alt="在这里插入图片描述"></p>
+<blockquote>
+<p>提示这个页面就意味着我们的网站已经搭建好了，教程也就结束了，如果你想单独搭建LNMP可以看我以往的文章</p>
+</blockquote>
+
+    
+
+    
+
+    
+    <div class="declare"> 
+      <ul class="post-copyright">
+        <li>
+          <strong>本文作者：</strong>
+          Li Zhan Qi
+        </li>
+        <li>
+          <strong>本文链接：</strong>
+          <a href="https://lzq-hopego.github.io/2023/05/21/部署宝塔面板-宝塔面板部署LNMP服务/" title="部署宝塔面板,宝塔面板部署LNMP服务" target="_blank">https://lzq-hopego.github.io/2023/05/21/部署宝塔面板-宝塔面板部署LNMP服务/</a>
+        </li>
+        
+        <li>
+          <strong>版权声明： </strong>
           
+          本博客所有文章除特别声明外，均采用 <a href="https://github.com/JoeyBling/hexo-theme-yilia-plus/blob/master/LICENSE" rel="external nofollow" target="_blank">MIT</a> 许可协议。转载请注明出处！
+        </li>
+        
+      </ul>
+    </div>
+    
+
+  </div>
+  <div class="article-info article-info-index">
+    
+    
 	<div class="article-tag tagcloud">
 		<i class="icon-price-tags icon"></i>
 		<ul class="article-tag-list">
@@ -312,458 +469,135 @@
 		</ul>
 	</div>
 
-          
+    
 
+    
+
+    
+    
+<div class="share-btn share-icons tooltip-left">
+  <div class="tooltip tooltip-east">
+    <span class="tooltip-item">
+      <a href="javascript:;" class="share-sns share-outer">
+        <i class="icon icon-share"></i>
+      </a>
+    </span>
+    <span class="tooltip-content">
+      <div class="share-wrap">
+        <div class="share-icons">
+          <a class="weibo share-sns" href="javascript:;" data-type="weibo">
+            <i class="icon icon-weibo"></i>
+          </a>
+          <!-- <a class="weixin share-sns wxFab" href="javascript:;" data-type="weixin">
+            <i class="icon icon-weixin"></i>
+          </a> -->
+          <a class="qq share-sns" href="javascript:;" data-type="qq">
+            <i class="icon icon-qq"></i>
+          </a>
+          <a class="douban share-sns" href="javascript:;" data-type="douban">
+            <i class="icon icon-douban"></i>
+          </a>
+          <a class="qzone share-sns" href="javascript:;" data-type="qzone">
+            <i class="icon icon-qzone"></i>
+          </a>
+          <a class="facebook share-sns" href="javascript:;" data-type="facebook">
+            <i class="icon icon-facebook"></i>
+          </a>
+          <a class="twitter share-sns" href="javascript:;" data-type="twitter">
+            <i class="icon icon-twitter"></i>
+          </a>
+          <a class="google share-sns" href="javascript:;" data-type="google">
+            <i class="icon icon-google"></i>
+          </a>
         </div>
-        <div class="clearfix"></div>
-    </header>
+      </div>
+    </span>
+  </div>
+</div>
+
+<div class="page-modal wx-share js-wx-box">
+    <a class="close js-modal-close" href="javascript:;"><i class="icon icon-close"></i></a>
+    <p>扫一扫，分享到微信</p>
+    <div class="wx-qrcode">
+     <!-- <img src="//pan.baidu.com/share/qrcode?url=https://lzq-hopego.github.io/2023/05/21/%E9%83%A8%E7%BD%B2%E5%AE%9D%E5%A1%94%E9%9D%A2%E6%9D%BF-%E5%AE%9D%E5%A1%94%E9%9D%A2%E6%9D%BF%E9%83%A8%E7%BD%B2LNMP%E6%9C%8D%E5%8A%A1/" alt="微信分享二维码"> -->
+    </div>
+</div>
+
+<div class="mask js-mask"></div>
+
+    
+    <div class="clearfix"></div>
+  </div>
   </div>
 </article>
-  
-    
-    
-    <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-      	<div class="article-meta">
-	      	
-<a href="/2023/05/20/%E5%9C%A8Centos8-RHEL8%E4%B8%AD%E9%83%A8%E7%BD%B2LNMP%E7%8E%AF%E5%A2%83/" class="archive-article-date">
-        <time datetime="2023-05-20T06:33:07.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2023-05-20</time>
-</a>
 
+
+<nav id="article-nav">
+  
+  
+    <a href="/2023/05/20/%E5%9C%A8Centos8-RHEL8%E4%B8%AD%E9%83%A8%E7%BD%B2LNMP%E7%8E%AF%E5%A2%83/" id="article-nav-older" class="article-nav-link-wrap">
+      <div class="article-nav-title">在Centos8/RHEL8中部署LNMP环境</div>
+      <i class="icon-circle-right"></i>
+    </a>
+  
+</nav>
+
+
+<aside class="wrap-side-operation">
+    <div class="mod-side-operation">
+        
+        <div class="jump-container" id="js-jump-container" style="display:none;">
+            <a href="javascript:void(0)" class="mod-side-operation__jump-to-top">
+                <i class="icon-font icon-back"></i>
+            </a>
+            <div id="js-jump-plan-container" class="jump-plan-container" style="top: -11px;">
+                <i class="icon-font icon-plane jump-plane"></i>
+            </div>
         </div>
-    	 
-  
-    <h1 itemprop="name">
-	
-	  <a class="archive-article-title" href="/2023/05/20/%E5%9C%A8Centos8-RHEL8%E4%B8%AD%E9%83%A8%E7%BD%B2LNMP%E7%8E%AF%E5%A2%83/" target="_blank">在Centos8/RHEL8中部署LNMP环境</a>
-  
-    </h1>
-  
+        
+        
+        <div class="toc-container tooltip-left">
+            <i class="icon-font icon-category"></i>
+            <div class="tooltip tooltip-east">
+                <span class="tooltip-item">
+                </span>
+                <span class="tooltip-content">
+                    <div class="toc-article">
+                    <ol class="toc"><li class="toc-item toc-level-1"><a class="toc-link" href="#%E5%AE%9D%E5%A1%94%E9%83%A8%E7%BD%B2%E6%95%99%E7%A8%8B%EF%BC%8C%E5%AE%9D%E5%A1%94%E9%83%A8%E7%BD%B2LNMP%E6%95%99%E7%A8%8B"><span class="toc-number">1.</span> <span class="toc-text">宝塔部署教程，宝塔部署LNMP教程</span></a><ol class="toc-child"><li class="toc-item toc-level-2"><a class="toc-link" href="#1%E3%80%81%E5%AE%89%E8%A3%85%E5%AE%9D%E5%A1%94%E9%9D%A2%E6%9D%BF"><span class="toc-number">1.1.</span> <span class="toc-text">1、安装宝塔面板</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#2%E3%80%81%E4%BF%AE%E6%94%B9%E5%AE%9D%E5%A1%94%E9%9D%A2%E6%9D%BF%E7%9A%84%E9%BB%98%E8%AE%A4%E5%AF%86%E7%A0%81"><span class="toc-number">1.2.</span> <span class="toc-text">2、修改宝塔面板的默认密码</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#3%E3%80%81%E5%AE%89%E8%A3%85%E9%83%A8%E7%BD%B2LNMP"><span class="toc-number">1.3.</span> <span class="toc-text">3、安装部署LNMP</span></a></li></ol></li></ol>
+                    </div>
+                </span>
+            </div>
+        </div>
+        
+    </div>
+</aside>
 
 
-        <div class="article-info info-on-right">
-          
-	<div class="article-tag tagcloud">
-		<i class="icon-price-tags icon"></i>
-		<ul class="article-tag-list">
-			 
-        		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color3">随笔</a>
-        		</li>
-      		 
-        		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color1">mysql</a>
-        		</li>
-      		 
-        		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color1">linux</a>
-        		</li>
-      		 
-        		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color1">nginx</a>
-        		</li>
-      		 
-        		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color4">php</a>
-        		</li>
-      		
-		</ul>
+
+
+
+
+
+
+
+
+
+
+
+
+
+  
+	<div id="beaudar-comment">
+		<link rel="stylesheet" href="/lib/beaudar.css"> <!--这里是我自己的css文件，如果你没有弄的话，可以不写。-->
+		<script src="https://beaudar.lipk.org/client.js" 
+				repo="lzq-hopego/lzq-hopego.github.io" 
+				issue-term="pathname"
+				label="comment"
+				theme="github-light"
+				branch="main"
+				crossorigin="anonymous" async>
+			</script>
 	</div>
-
-          
-
-        </div>
-        <div class="clearfix"></div>
-    </header>
-  </div>
-</article>
-  
-    
-    
-    <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-      	<div class="article-meta">
-	      	
-<a href="/2023/05/18/eNSP%E5%AE%89%E8%A3%85%E5%8C%85/" class="archive-article-date">
-        <time datetime="2023-05-18T07:59:13.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2023-05-18</time>
-</a>
-
-        </div>
-    	 
-  
-    <h1 itemprop="name">
-	
-	  <a class="archive-article-title" href="/2023/05/18/eNSP%E5%AE%89%E8%A3%85%E5%8C%85/" target="_blank">eNSP安装包</a>
-  
-    </h1>
-  
-
-
-        <div class="article-info info-on-right">
-          
-	<div class="article-tag tagcloud">
-		<i class="icon-price-tags icon"></i>
-		<ul class="article-tag-list">
-			 
-        		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color3">随笔</a>
-        		</li>
-      		 
-        		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color5">eNSP</a>
-        		</li>
-      		
-		</ul>
-	</div>
-
-          
-
-        </div>
-        <div class="clearfix"></div>
-    </header>
-  </div>
-</article>
-  
-    
-    
-    <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-      	<div class="article-meta">
-	      	
-<a href="/2023/05/18/eNSP%E9%94%99%E8%AF%AF40%E5%8E%9F%E5%9B%A0%E5%8F%8A%E8%A7%A3%E5%86%B3%E5%8A%9E%E6%B3%95/" class="archive-article-date">
-        <time datetime="2023-05-18T04:57:38.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2023-05-18</time>
-</a>
-
-        </div>
-    	 
-  
-    <h1 itemprop="name">
-	
-	  <a class="archive-article-title" href="/2023/05/18/eNSP%E9%94%99%E8%AF%AF40%E5%8E%9F%E5%9B%A0%E5%8F%8A%E8%A7%A3%E5%86%B3%E5%8A%9E%E6%B3%95/" target="_blank">eNSP错误40原因及解决办法</a>
-  
-    </h1>
-  
-
-
-        <div class="article-info info-on-right">
-          
-	<div class="article-tag tagcloud">
-		<i class="icon-price-tags icon"></i>
-		<ul class="article-tag-list">
-			 
-        		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color3">随笔</a>
-        		</li>
-      		 
-        		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color5">eNSP</a>
-        		</li>
-      		
-		</ul>
-	</div>
-
-          
-
-        </div>
-        <div class="clearfix"></div>
-    </header>
-  </div>
-</article>
-  
-    
-    
-    <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-      	<div class="article-meta">
-	      	
-<a href="/2023/05/18/eNSP%E9%94%99%E8%AF%AF40%EF%BC%8C%E5%8E%9F%E5%9B%A0%E4%B8%80%EF%BC%9A%E6%B3%A8%E5%86%8C%E8%A1%A8%E5%BC%82%E5%B8%B8/" class="archive-article-date">
-        <time datetime="2023-05-18T04:55:01.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2023-05-18</time>
-</a>
-
-        </div>
-    	 
-  
-    <h1 itemprop="name">
-	
-	  <a class="archive-article-title" href="/2023/05/18/eNSP%E9%94%99%E8%AF%AF40%EF%BC%8C%E5%8E%9F%E5%9B%A0%E4%B8%80%EF%BC%9A%E6%B3%A8%E5%86%8C%E8%A1%A8%E5%BC%82%E5%B8%B8/" target="_blank">eNSP错误40，原因一：注册表异常</a>
-  
-    </h1>
-  
-
-
-        <div class="article-info info-on-right">
-          
-	<div class="article-tag tagcloud">
-		<i class="icon-price-tags icon"></i>
-		<ul class="article-tag-list">
-			 
-        		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color3">随笔</a>
-        		</li>
-      		 
-        		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color5">eNSP</a>
-        		</li>
-      		
-		</ul>
-	</div>
-
-          
-
-        </div>
-        <div class="clearfix"></div>
-    </header>
-  </div>
-</article>
-  
-    
-    
-    <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-      	<div class="article-meta">
-	      	
-<a href="/2023/05/18/eNSP%E9%94%99%E8%AF%AF40%EF%BC%8C%E5%8E%9F%E5%9B%A0%E5%9B%9B%EF%BC%9A%E5%86%85%E6%A0%B8%E9%9A%94%E7%A6%BB%E6%9C%AA%E5%85%B3%E9%97%AD/" class="archive-article-date">
-        <time datetime="2023-05-18T04:53:59.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2023-05-18</time>
-</a>
-
-        </div>
-    	 
-  
-    <h1 itemprop="name">
-	
-	  <a class="archive-article-title" href="/2023/05/18/eNSP%E9%94%99%E8%AF%AF40%EF%BC%8C%E5%8E%9F%E5%9B%A0%E5%9B%9B%EF%BC%9A%E5%86%85%E6%A0%B8%E9%9A%94%E7%A6%BB%E6%9C%AA%E5%85%B3%E9%97%AD/" target="_blank">eNSP错误40，原因四：内核隔离未关闭</a>
-  
-    </h1>
-  
-
-
-        <div class="article-info info-on-right">
-          
-	<div class="article-tag tagcloud">
-		<i class="icon-price-tags icon"></i>
-		<ul class="article-tag-list">
-			 
-        		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color3">随笔</a>
-        		</li>
-      		 
-        		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color5">eNSP</a>
-        		</li>
-      		
-		</ul>
-	</div>
-
-          
-
-        </div>
-        <div class="clearfix"></div>
-    </header>
-  </div>
-</article>
-  
-    
-    
-    <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-      	<div class="article-meta">
-	      	
-<a href="/2023/05/18/eNSP%E9%94%99%E8%AF%AF40%EF%BC%8C%E5%8E%9F%E5%9B%A0%E4%B8%89%EF%BC%9Awindows10%E8%87%AA%E5%B8%A6%E8%99%9A%E6%8B%9F%E5%8C%96%E8%BD%AF%E4%BB%B6Hyper-V/" class="archive-article-date">
-        <time datetime="2023-05-18T04:52:54.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2023-05-18</time>
-</a>
-
-        </div>
-    	 
-  
-    <h1 itemprop="name">
-	
-	  <a class="archive-article-title" href="/2023/05/18/eNSP%E9%94%99%E8%AF%AF40%EF%BC%8C%E5%8E%9F%E5%9B%A0%E4%B8%89%EF%BC%9Awindows10%E8%87%AA%E5%B8%A6%E8%99%9A%E6%8B%9F%E5%8C%96%E8%BD%AF%E4%BB%B6Hyper-V/" target="_blank">eNSP错误40，原因三：windows10自带虚拟化软件Hyper-V</a>
-  
-    </h1>
-  
-
-
-        <div class="article-info info-on-right">
-          
-	<div class="article-tag tagcloud">
-		<i class="icon-price-tags icon"></i>
-		<ul class="article-tag-list">
-			 
-        		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color3">随笔</a>
-        		</li>
-      		 
-        		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color5">eNSP</a>
-        		</li>
-      		
-		</ul>
-	</div>
-
-          
-
-        </div>
-        <div class="clearfix"></div>
-    </header>
-  </div>
-</article>
-  
-    
-    
-    <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-      	<div class="article-meta">
-	      	
-<a href="/2023/05/18/eNSP%E9%94%99%E8%AF%AF40%EF%BC%8C%E5%8E%9F%E5%9B%A0%E4%BA%8C%EF%BC%9A%E6%9D%80%E6%AF%92%E8%BD%AF%E4%BB%B6%EF%BC%8C%E5%85%B6%E5%AE%83%E8%BD%AF%E4%BB%B6%E5%8F%8A%E6%9C%AA%E5%BC%80%E5%90%AF%E8%99%9A%E6%8B%9F%E5%8C%96%E5%AF%BC%E8%87%B4/" class="archive-article-date">
-        <time datetime="2023-05-18T04:51:50.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2023-05-18</time>
-</a>
-
-        </div>
-    	 
-  
-    <h1 itemprop="name">
-	
-	  <a class="archive-article-title" href="/2023/05/18/eNSP%E9%94%99%E8%AF%AF40%EF%BC%8C%E5%8E%9F%E5%9B%A0%E4%BA%8C%EF%BC%9A%E6%9D%80%E6%AF%92%E8%BD%AF%E4%BB%B6%EF%BC%8C%E5%85%B6%E5%AE%83%E8%BD%AF%E4%BB%B6%E5%8F%8A%E6%9C%AA%E5%BC%80%E5%90%AF%E8%99%9A%E6%8B%9F%E5%8C%96%E5%AF%BC%E8%87%B4/" target="_blank">eNSP错误40，原因二：杀毒软件，其它软件及未开启虚拟化导致</a>
-  
-    </h1>
-  
-
-
-        <div class="article-info info-on-right">
-          
-	<div class="article-tag tagcloud">
-		<i class="icon-price-tags icon"></i>
-		<ul class="article-tag-list">
-			 
-        		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color3">随笔</a>
-        		</li>
-      		 
-        		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color5">eNSP</a>
-        		</li>
-      		
-		</ul>
-	</div>
-
-          
-
-        </div>
-        <div class="clearfix"></div>
-    </header>
-  </div>
-</article>
-  
-    
-    
-    <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-      	<div class="article-meta">
-	      	
-<a href="/2023/05/18/eNSP%E9%94%99%E8%AF%AF40%EF%BC%8C%E8%A7%A3%E5%86%B3%E4%B8%80%EF%BC%9AVirtualBox%E5%AE%89%E8%A3%85%E5%90%8E%E6%97%A0%E8%99%9A%E6%8B%9F%E7%BD%91%E5%8D%A1/" class="archive-article-date">
-        <time datetime="2023-05-18T04:50:24.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2023-05-18</time>
-</a>
-
-        </div>
-    	 
-  
-    <h1 itemprop="name">
-	
-	  <a class="archive-article-title" href="/2023/05/18/eNSP%E9%94%99%E8%AF%AF40%EF%BC%8C%E8%A7%A3%E5%86%B3%E4%B8%80%EF%BC%9AVirtualBox%E5%AE%89%E8%A3%85%E5%90%8E%E6%97%A0%E8%99%9A%E6%8B%9F%E7%BD%91%E5%8D%A1/" target="_blank">eNSP错误40，解决一：VirtualBox安装后无虚拟网卡</a>
-  
-    </h1>
-  
-
-
-        <div class="article-info info-on-right">
-          
-	<div class="article-tag tagcloud">
-		<i class="icon-price-tags icon"></i>
-		<ul class="article-tag-list">
-			 
-        		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color3">随笔</a>
-        		</li>
-      		 
-        		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color5">eNSP</a>
-        		</li>
-      		
-		</ul>
-	</div>
-
-          
-
-        </div>
-        <div class="clearfix"></div>
-    </header>
-  </div>
-</article>
-  
-    
-    
-    <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-      	<div class="article-meta">
-	      	
-<a href="/2023/05/18/eNSP%E3%80%81VirtualBox%E5%85%B3%E8%81%94%E6%80%A7%EF%BC%8C%E6%9F%A5%E7%9C%8BVirtualBox%E7%BD%91%E5%8D%A1%EF%BC%8C%E5%AE%89%E8%A3%85%E6%8F%90%E7%A4%BA%E5%85%BC%E5%AE%B9%E6%80%A7%EF%BC%8C%E7%99%BE%E5%BA%A6%E5%85%B3%E9%97%AD%E5%86%85%E6%A0%B8%E9%9A%94%E7%A6%BB/" class="archive-article-date">
-        <time datetime="2023-05-18T04:45:57.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2023-05-18</time>
-</a>
-
-        </div>
-    	 
-  
-    <h1 itemprop="name">
-	
-	  <a class="archive-article-title" href="/2023/05/18/eNSP%E3%80%81VirtualBox%E5%85%B3%E8%81%94%E6%80%A7%EF%BC%8C%E6%9F%A5%E7%9C%8BVirtualBox%E7%BD%91%E5%8D%A1%EF%BC%8C%E5%AE%89%E8%A3%85%E6%8F%90%E7%A4%BA%E5%85%BC%E5%AE%B9%E6%80%A7%EF%BC%8C%E7%99%BE%E5%BA%A6%E5%85%B3%E9%97%AD%E5%86%85%E6%A0%B8%E9%9A%94%E7%A6%BB/" target="_blank">eNSP、VirtualBox关联性，查看VirtualBox网卡，安装提示兼容性，百度关闭内核隔离</a>
-  
-    </h1>
-  
-
-
-        <div class="article-info info-on-right">
-          
-	<div class="article-tag tagcloud">
-		<i class="icon-price-tags icon"></i>
-		<ul class="article-tag-list">
-			 
-        		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color3">随笔</a>
-        		</li>
-      		 
-        		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color5">eNSP</a>
-        		</li>
-      		
-		</ul>
-	</div>
-
-          
-
-        </div>
-        <div class="clearfix"></div>
-    </header>
-  </div>
-</article>
-  
-  
-    </div></section>
-  
-
-    
-    <nav id="page-nav">
-      <span class="page-number current">1</span><a class="page-number" href="/archives/2023/page/2/">2</a><a class="extend next" rel="next" href="/archives/2023/page/2/">下一页</a>
-    </nav>
-  
 
 
           </div>
@@ -799,8 +633,8 @@
 	var yiliaConfig = {
 		mathjax: false,
 		isHome: false,
-		isPost: false,
-		isArchive: true,
+		isPost: true,
+		isArchive: false,
 		isTag: false,
 		isCategory: false,
 		open_in_new: true,
