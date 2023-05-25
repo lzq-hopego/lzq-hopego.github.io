@@ -465,34 +465,29 @@
 </nav>
 
 
-<aside class="wrap-side-operation">
-    <div class="mod-side-operation">
-        
-        <div class="jump-container" id="js-jump-container" style="display:none;">
-            <a href="javascript:void(0)" class="mod-side-operation__jump-to-top">
-                <i class="icon-font icon-back"></i>
-            </a>
-            <div id="js-jump-plan-container" class="jump-plan-container" style="top: -11px;">
-                <i class="icon-font icon-plane jump-plane"></i>
-            </div>
-        </div>
-        
-        
-        <div class="toc-container tooltip-left">
-            <i class="icon-font icon-category"></i>
-            <div class="tooltip tooltip-east">
-                <span class="tooltip-item">
-                </span>
-                <span class="tooltip-content">
-                    <div class="toc-article">
-                    <ol class="toc"><li class="toc-item toc-level-3"><a class="toc-link" href="#%E6%A3%80%E6%9F%A5%E7%BD%91%E7%BB%9C%E9%80%82%E9%85%8D%E5%99%A8"><span class="toc-number">1.</span> <span class="toc-text">检查网络适配器</span></a></li></ol>
-                    </div>
-                </span>
-            </div>
-        </div>
-        
-    </div>
-</aside>
+
+  <div id="giteement-ctn"></div>
+  
+    <!-- <link rel="stylesheet" href="https://giteement.oss-cn-beijing.aliyuncs.com/wd-discuss.css"> -->
+    <!-- <script src="https://giteement.oss-cn-beijing.aliyuncs.com/discuss_hexo.js"></script> -->
+    <link rel="stylesheet" href="https://giteement.oss-cn-beijing.aliyuncs.com/default.css">
+    <script src="https://giteement.oss-cn-beijing.aliyuncs.com/giteement.browser.js"></script>
+  
+  <script>
+  var giteement = new Giteement({
+    id: '20230518125501',
+    owner: 'lizhanqi',
+    repo: 'lzq-hopego',
+    backcall_uri: 'https://lzq-hopego.gitee.io/lzq-hopego',
+    oauth_uri: 'https://cors-anywhere.herokuapp.com/https://gitee.com/oauth/token',
+    oauth: {
+      client_id: 'd85d3cfca770d7dc7146b849a2dc1f98348e9a37c3beafc788e1fa6f30b76a63',
+      client_secret: '072d977d4e0be2b886ab44ed7cadc4db7ed94e7ae0962d945a91b83679d2baed'
+    },
+  })
+  giteement.render('giteement-ctn')
+  </script>
+
 
 
 

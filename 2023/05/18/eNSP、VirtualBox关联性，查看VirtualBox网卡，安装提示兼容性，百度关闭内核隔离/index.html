@@ -479,34 +479,29 @@
 </nav>
 
 
-<aside class="wrap-side-operation">
-    <div class="mod-side-operation">
-        
-        <div class="jump-container" id="js-jump-container" style="display:none;">
-            <a href="javascript:void(0)" class="mod-side-operation__jump-to-top">
-                <i class="icon-font icon-back"></i>
-            </a>
-            <div id="js-jump-plan-container" class="jump-plan-container" style="top: -11px;">
-                <i class="icon-font icon-plane jump-plane"></i>
-            </div>
-        </div>
-        
-        
-        <div class="toc-container tooltip-left">
-            <i class="icon-font icon-category"></i>
-            <div class="tooltip tooltip-east">
-                <span class="tooltip-item">
-                </span>
-                <span class="tooltip-content">
-                    <div class="toc-article">
-                    <ol class="toc"><li class="toc-item toc-level-2"><a class="toc-link" href="#1%E3%80%81eNSP%E4%B8%BA%E4%BB%80%E4%B9%88%E9%9C%80%E8%A6%81VBOX"><span class="toc-number">1.</span> <span class="toc-text">1、eNSP为什么需要VBOX</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#2%E3%80%81VBOX%E7%9A%84%E8%99%9A%E6%8B%9F%E7%BD%91%E5%8D%A1%E5%9C%A8%E5%93%AA%E7%9C%8B"><span class="toc-number">2.</span> <span class="toc-text">2、VBOX的虚拟网卡在哪看</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#3%E3%80%81windows10%E4%B8%8EVBOX%E5%85%BC%E5%AE%B9%E6%80%A7"><span class="toc-number">3.</span> <span class="toc-text">3、windows10与VBOX兼容性</span></a></li></ol>
-                    </div>
-                </span>
-            </div>
-        </div>
-        
-    </div>
-</aside>
+
+  <div id="giteement-ctn"></div>
+  
+    <!-- <link rel="stylesheet" href="https://giteement.oss-cn-beijing.aliyuncs.com/wd-discuss.css"> -->
+    <!-- <script src="https://giteement.oss-cn-beijing.aliyuncs.com/discuss_hexo.js"></script> -->
+    <link rel="stylesheet" href="https://giteement.oss-cn-beijing.aliyuncs.com/default.css">
+    <script src="https://giteement.oss-cn-beijing.aliyuncs.com/giteement.browser.js"></script>
+  
+  <script>
+  var giteement = new Giteement({
+    id: '20230518124557',
+    owner: 'lizhanqi',
+    repo: 'lzq-hopego',
+    backcall_uri: 'https://lzq-hopego.gitee.io/lzq-hopego',
+    oauth_uri: 'https://cors-anywhere.herokuapp.com/https://gitee.com/oauth/token',
+    oauth: {
+      client_id: 'd85d3cfca770d7dc7146b849a2dc1f98348e9a37c3beafc788e1fa6f30b76a63',
+      client_secret: '072d977d4e0be2b886ab44ed7cadc4db7ed94e7ae0962d945a91b83679d2baed'
+    },
+  })
+  giteement.render('giteement-ctn')
+  </script>
+
 
 
 
